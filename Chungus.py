@@ -25,7 +25,7 @@ def RegAccount():#function of the button
 text=Label(win, text='Enter your username')
 ent = Entry(win) 
     
-btn=Button(win,text="Click Me",command=RegAccount)
+btn=Button(win,text="Register",command=RegAccount)
 text.pack()
 ent.pack()
 btn.pack()
