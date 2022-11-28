@@ -29,6 +29,7 @@ def change_to_Main():
     Login_frame.forget()
     Current_frame.forget()
     Upcoming_frame.forget()
+    Checkout_frame.forget()
     Main_frame.pack(fill='both', expand=1)
 
 #function to logout of Main page and go back to login page
@@ -54,6 +55,33 @@ def change_to_Upcoming():
     Main_frame.forget()
     Upcoming_frame.pack(fill='both', expand=1)
 
+#function to change frame to movie_description
+def change_to_Description():
+    Login_frame.forget()
+    Main_frame.forget()
+    Upcoming_frame.forget()
+    Current_frame.forget()
+    Description_frame.pack(fill='both', expand=1)
+
+#function to change frame to Showtimes
+def change_to_Showtime():
+    Login_frame.forget()
+    Main_frame.forget()
+    Upcoming_frame.forget()
+    Current_frame.forget()
+    Description_frame.forget()
+    Showtime_frame.pack(fill='both', expand=1)
+
+#function to change frame to checkout
+def change_to_Checkout():
+    Login_frame.forget()
+    Main_frame.forget()
+    Upcoming_frame.forget()
+    Current_frame.forget()
+    Showtime_frame.forget()
+    Checkout_frame.pack(fill='both', expand=1)
+
+
 #setting up initial window
 root = tkinter.Tk()
 root.title("Movie Booking System")
@@ -65,6 +93,9 @@ Main_frame = tkinter.Frame(root)
 Register_frame =tkinter.Frame(root)
 Upcoming_frame = tkinter.Frame(root)
 Current_frame = tkinter.Frame(root)
+Showtime_frame = tkinter.Frame(root)
+Checkout_frame = tkinter.Frame(root)
+Description_frame = tkinter.Frame(root)
 
 #font setup
 font_large = font.Font(family='Georgia',size='20',weight='bold')
@@ -137,7 +168,7 @@ img20= ImageTk.PhotoImage(image14)
 img21= ImageTk.PhotoImage(image15)
 
 #movie buttons
-btn_FeaturedMovie_19 = tkinter.Button(Main_frame,image=img19)
+btn_FeaturedMovie_19 = tkinter.Button(Main_frame,image=img19,command= change_to_Description)
 btn_FeaturedMovie_20 = tkinter.Button(Main_frame,image=img20)
 btn_FeaturedMovie_21 = tkinter.Button(Main_frame,image=img21)
 
@@ -189,7 +220,7 @@ btn_CurrentMovie_4 = tkinter.Button(Current_frame,image=img4)
 btn_CurrentMovie_5 = tkinter.Button(Current_frame,image=img5)
 btn_CurrentMovie_6 = tkinter.Button(Current_frame,image=img6)
 btn_CurrentMovie_7 = tkinter.Button(Current_frame,image=img7)
-btn_CurrentMovie_8 = tkinter.Button(Current_frame,image=img8)
+btn_CurrentMovie_8 = tkinter.Button(Current_frame,image=img8,command= change_to_Description)
 btn_CurrentMovie_9 = tkinter.Button(Current_frame,image=img9)
 btn_change_to_Main = tkinter.Button(Current_frame,font = font_small,text ="Back",command = change_to_Main)
 
@@ -265,6 +296,30 @@ btn_UpcomingMovie_16.place(x=40,y=400)
 btn_UpcomingMovie_17.place(x=180,y=400)
 btn_UpcomingMovie_18.place(x=320,y=400)
 btn_change_to_Main.place(x=10,y=10)
+
+#-------------------------Description Frame---------------------------------------------
+
+#making buttons 
+btn_change_to_showtime = tkinter.Button(Description_frame,font = font_small,text ="Book Now",command = change_to_Showtime)
+
+#placing buttons
+btn_change_to_showtime.place(x=185,y=500)
+
+#-------------------------Showtime Frame---------------------------------------------
+
+
+#making buttons 
+btn_change_to_checkout = tkinter.Button(Showtime_frame,font = font_small,text ="Checkout",command = change_to_Checkout)
+
+#placing buttons
+btn_change_to_checkout.place(x=185,y=500)
+
+#-------------------------Checkout Frame---------------------------------------------
+#making buttons 
+btn_change_to_confirm = tkinter.Button(Checkout_frame,font = font_small,text ="Confirm",command = change_to_Main)
+
+#placing buttons
+btn_change_to_confirm.place(x=185,y=500)
 
 
 
