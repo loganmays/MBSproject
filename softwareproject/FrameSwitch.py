@@ -32,10 +32,19 @@ def change_to_Main():
     Checkout_frame.forget()
     Main_frame.pack(fill='both', expand=1)
 
+def change_to_Admin():
+    Login_frame.forget()
+    Current_frame.forget()
+    Upcoming_frame.forget()
+    Checkout_frame.forget()
+    Admin_frame.pack(fill='both', expand=1)
+
 #function to logout of Main page and go back to login page
 def change_to_Login():
     Main_frame.forget()
     Register_frame.forget()
+    Checkout_frame.forget()
+    Admin_frame.forget()
     Login_frame.pack(fill='both', expand=1)
 
 #function to change frame to register frame
@@ -81,6 +90,16 @@ def change_to_Checkout():
     Showtime_frame.forget()
     Checkout_frame.pack(fill='both', expand=1)
 
+#function to display message after hitting Checkout button
+def CheckoutConfirmed():
+    msg3 = 'Checkout Successful'
+    tkinter.messagebox.showinfo('Checkout',msg3)
+    Login_frame.forget()
+    Current_frame.forget()
+    Upcoming_frame.forget()
+    Checkout_frame.forget()
+    Main_frame.pack(fill='both', expand=1)
+
 
 #setting up initial window
 root = tkinter.Tk()
@@ -96,6 +115,7 @@ Current_frame = tkinter.Frame(root)
 Showtime_frame = tkinter.Frame(root)
 Checkout_frame = tkinter.Frame(root)
 Description_frame = tkinter.Frame(root)
+Admin_frame = tkinter.Frame(root)
 
 #font setup
 font_large = font.Font(family='Georgia',size='20',weight='bold')
@@ -116,9 +136,11 @@ ent.place(x=165,y=130)
 ent2.place(x=165,y=190)
 #making the buttons for the login frame
 btn_change_to_Main = tkinter.Button(Login_frame,text='Login',font=font_small,command=change_to_Main,height=2,width=15)
+btn_change_to_Admin = tkinter.Button(Login_frame,text='Admin',font=font_small,command=change_to_Admin,height=2,width=15)
 btn_change_to_Register = tkinter.Button(Login_frame,text='Create Account',font=font_small,command=change_to_Register,height=2,width=15)
 btn_change_to_Main.place(x=150,y=250)
 btn_change_to_Register.place(x=150,y=500)
+btn_change_to_Admin.place(x=150,y=315)
 
 #-------------------------Register Frame---------------------------------------------
 #labels for the Register page
@@ -316,12 +338,62 @@ btn_change_to_checkout.place(x=185,y=500)
 
 #-------------------------Checkout Frame---------------------------------------------
 #making buttons 
-btn_change_to_confirm = tkinter.Button(Checkout_frame,font = font_small,text ="Confirm",command = change_to_Main)
+btn_change_to_confirm = tkinter.Button(Checkout_frame,font = font_small,text ="Confirm",command = CheckoutConfirmed)
+
+lbl_username_Checkout = tkinter.Label(Checkout_frame,text='Checkout', font=font_large)
+lbl_creditcardnumber_Checkout = tkinter.Label(Checkout_frame,text='Credit Card Number:')
+lbl_expirationdate_Checkout = tkinter.Label(Checkout_frame,text='Expiration Date:')
+lbl_cvv_Checkout = tkinter.Label(Checkout_frame,text='CVV:')
+lbl_nameoncard_Checkout = tkinter.Label(Checkout_frame,text='Name on Card:')
+lbl_addressline_Checkout = tkinter.Label(Checkout_frame,text='Address:')
+lbl_city_Checkout = tkinter.Label(Checkout_frame,text='City:')
+lbl_state_Checkout = tkinter.Label(Checkout_frame,text='State:')
+lbl_zipcode_Checkout = tkinter.Label(Checkout_frame,text='ZIP code:')
+lbl_orLine_Checkout = tkinter.Label(Checkout_frame, text='---------------------------or---------------------------')
+btn_paypal_Checkout = tkinter.Button(Checkout_frame,font = font_small,text ="PayPal")
+
+ent5 = Entry(Checkout_frame)
+ent6 = Entry(Checkout_frame)
+ent7 = Entry(Checkout_frame)
+ent8 = Entry(Checkout_frame)
+ent9 = Entry(Checkout_frame)
+ent10 = Entry(Checkout_frame)
+ent11 = Entry(Checkout_frame)
+ent12 = Entry(Checkout_frame)
+
+lbl_username_Checkout.pack(padx=150,pady=20)
+lbl_creditcardnumber_Checkout.place(x=70,y=120)
+lbl_expirationdate_Checkout.place(x=70,y=140)
+lbl_cvv_Checkout.place(x=70,y=160)
+lbl_nameoncard_Checkout.place(x=70,y=180)
+lbl_addressline_Checkout.place(x=70,y=200)
+lbl_city_Checkout.place(x=70,y=220)
+lbl_state_Checkout.place(x=70,y=240)
+lbl_zipcode_Checkout.place(x=70,y=260)
+lbl_orLine_Checkout.place(x=70,y=285)
+btn_paypal_Checkout.place(x=180,y=310)
+btn_change_to_Main = tkinter.Button(Checkout_frame,font = font_small,text ="Back",command = change_to_Main)
+
+ent5.place(x=185,y=120)
+ent6.place(x=160,y=140)
+ent7.place(x=105,y=160)
+ent8.place(x=160,y=180)
+ent9.place(x=125,y=200)
+ent10.place(x=100,y=220)
+ent11.place(x=105,y=240)
+ent12.place(x=125,y=260)
+btn_change_to_Main.place(x=10,y=10)
 
 #placing buttons
-btn_change_to_confirm.place(x=185,y=500)
+btn_change_to_confirm.place(x=180,y=500)
 
+#-------------------------Admin Frame---------------------------------------------
 
+btn_kowalski_Admin = tkinter.Button(Checkout_frame,font = font_small,text ="Status Report")
+btn_change_to_Login = tkinter.Button(Admin_frame,font=font_small,text='Logout',command=change_to_Login,height=2,width=40)
+
+btn_kowalski_Admin.place(x=40,y=530)
+btn_change_to_Login.place(x=40,y=530)
 
 #running the program starting at the Login Frame
 Login_frame.pack(fill='both', expand=1)
