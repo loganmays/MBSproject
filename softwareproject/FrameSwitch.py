@@ -37,6 +37,7 @@ def change_to_Admin():
     Current_frame.forget()
     Upcoming_frame.forget()
     Checkout_frame.forget()
+    ManageShows_frame.forget()
     Admin_frame.pack(fill='both', expand=1)
 
 #function to logout of Main page and go back to login page
@@ -90,6 +91,17 @@ def change_to_Checkout():
     Showtime_frame.forget()
     Checkout_frame.pack(fill='both', expand=1)
 
+#function to change frame to manage shows
+def change_to_ManageShows():
+    Login_frame.forget()
+    Main_frame.forget()
+    Upcoming_frame.forget()
+    Current_frame.forget()
+    Showtime_frame.forget()
+    Admin_frame.forget()
+    ManageShows_frame.forget()
+    ManageShows_frame.pack(fill='both', expand=1)
+
 #function to display message after hitting Checkout button
 def CheckoutConfirmed():
     msg3 = 'Checkout Successful'
@@ -100,6 +112,16 @@ def CheckoutConfirmed():
     Checkout_frame.forget()
     Main_frame.pack(fill='both', expand=1)
 
+#function to display message of status report
+def StatusReport():
+    msg4 = 'Kowalski, Analysis'
+    tkinter.messagebox.showinfo('Status Report',msg4)
+    Login_frame.forget()
+    Current_frame.forget()
+    Upcoming_frame.forget()
+    Checkout_frame.forget()
+    Admin_frame.forget()
+    Admin_frame.pack(fill='both', expand=1)
 
 #setting up initial window
 root = tkinter.Tk()
@@ -116,6 +138,7 @@ Showtime_frame = tkinter.Frame(root)
 Checkout_frame = tkinter.Frame(root)
 Description_frame = tkinter.Frame(root)
 Admin_frame = tkinter.Frame(root)
+ManageShows_frame = tkinter.Frame(root)
 
 #font setup
 font_large = font.Font(family='Georgia',size='20',weight='bold')
@@ -388,12 +411,23 @@ btn_change_to_Main.place(x=10,y=10)
 btn_change_to_confirm.place(x=180,y=500)
 
 #-------------------------Admin Frame---------------------------------------------
+lbl_adminview_Admin = tkinter.Label(Admin_frame,text='Administration View', font=font_large)
 
-btn_kowalski_Admin = tkinter.Button(Checkout_frame,font = font_small,text ="Status Report")
+btn_kowalski_Admin = tkinter.Button(Admin_frame,font = font_small,text ="Status Report", command = StatusReport)
+btn_manageshow_Admin = tkinter.Button(Admin_frame,text='Manage Shows',font=font_small,command=change_to_ManageShows,height=2,width=15)
 btn_change_to_Login = tkinter.Button(Admin_frame,font=font_small,text='Logout',command=change_to_Login,height=2,width=40)
 
-btn_kowalski_Admin.place(x=40,y=530)
+
+lbl_adminview_Admin.place(x=85,y=20)
+btn_kowalski_Admin.place(x=175,y=100)
+btn_manageshow_Admin.place(x=157,y=150)
 btn_change_to_Login.place(x=40,y=530)
+
+
+#-------------------------Manage Shows Frame---------------------------------------------
+btn_change_to_Main = tkinter.Button(ManageShows_frame,font = font_small,text ="Back",command = change_to_Admin)
+btn_change_to_Main.place(x=10,y=10)
+
 
 #running the program starting at the Login Frame
 Login_frame.pack(fill='both', expand=1)
