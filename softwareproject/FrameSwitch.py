@@ -24,27 +24,42 @@ def RegAccount():#function of the button
     #     msg='You are eligible to vote!'
     # tkinter.messagebox.showinfo('Eligibility',msg)
 
-#function to change to the mainscreen after hit login
-def change_to_Main():
+#function to display message after hitting Checkout button
+def CheckoutConfirmed():
+    msg3 = 'Checkout Successful'
+    tkinter.messagebox.showinfo('Checkout',msg3)
     Login_frame.forget()
     Current_frame.forget()
     Upcoming_frame.forget()
     Checkout_frame.forget()
     Main_frame.pack(fill='both', expand=1)
 
-def change_to_Admin():
+#function to display message of status report
+def StatusReport():
+    msg4 = 'Kowalski, Analysis'
+    tkinter.messagebox.showinfo('Status Report',msg4)
     Login_frame.forget()
     Current_frame.forget()
     Upcoming_frame.forget()
     Checkout_frame.forget()
-    ManageShows_frame.forget()
+    Admin_frame.forget()
     Admin_frame.pack(fill='both', expand=1)
+
+#function to change to the mainscreen after hit login
+def change_to_Main():
+    Login_frame.forget()
+    Current_frame.forget()
+    Upcoming_frame.forget()
+    Checkout_frame.forget()
+    Description_frame.forget()
+    Main_frame.pack(fill='both', expand=1)
+
+
 
 #function to logout of Main page and go back to login page
 def change_to_Login():
     Main_frame.forget()
     Register_frame.forget()
-    Checkout_frame.forget()
     Admin_frame.forget()
     Login_frame.pack(fill='both', expand=1)
 
@@ -57,6 +72,7 @@ def change_to_Register():
 def change_to_Current():
     Login_frame.forget()
     Main_frame.forget()
+    Description_frame.forget()
     Current_frame.pack(fill='both', expand=1)
 
 #function to change frame to upcoming Movies
@@ -79,6 +95,7 @@ def change_to_Showtime():
     Main_frame.forget()
     Upcoming_frame.forget()
     Current_frame.forget()
+    Checkout_frame.forget()
     Description_frame.forget()
     Showtime_frame.pack(fill='both', expand=1)
 
@@ -91,6 +108,15 @@ def change_to_Checkout():
     Showtime_frame.forget()
     Checkout_frame.pack(fill='both', expand=1)
 
+#function to change frame to Admin
+def change_to_Admin():
+    Login_frame.forget()
+    Current_frame.forget()
+    Upcoming_frame.forget()
+    Checkout_frame.forget()
+    ManageShows_frame.forget()
+    Admin_frame.pack(fill='both', expand=1)
+
 #function to change frame to manage shows
 def change_to_ManageShows():
     Login_frame.forget()
@@ -102,26 +128,7 @@ def change_to_ManageShows():
     ManageShows_frame.forget()
     ManageShows_frame.pack(fill='both', expand=1)
 
-#function to display message after hitting Checkout button
-def CheckoutConfirmed():
-    msg3 = 'Checkout Successful'
-    tkinter.messagebox.showinfo('Checkout',msg3)
-    Login_frame.forget()
-    Current_frame.forget()
-    Upcoming_frame.forget()
-    Checkout_frame.forget()
-    Main_frame.pack(fill='both', expand=1)
 
-#function to display message of status report
-def StatusReport():
-    msg4 = 'Kowalski, Analysis'
-    tkinter.messagebox.showinfo('Status Report',msg4)
-    Login_frame.forget()
-    Current_frame.forget()
-    Upcoming_frame.forget()
-    Checkout_frame.forget()
-    Admin_frame.forget()
-    Admin_frame.pack(fill='both', expand=1)
 
 #setting up initial window
 root = tkinter.Tk()
@@ -139,6 +146,7 @@ Checkout_frame = tkinter.Frame(root)
 Description_frame = tkinter.Frame(root)
 Admin_frame = tkinter.Frame(root)
 ManageShows_frame = tkinter.Frame(root)
+
 
 #font setup
 font_large = font.Font(family='Georgia',size='20',weight='bold')
@@ -159,8 +167,8 @@ ent.place(x=165,y=130)
 ent2.place(x=165,y=190)
 #making the buttons for the login frame
 btn_change_to_Main = tkinter.Button(Login_frame,text='Login',font=font_small,command=change_to_Main,height=2,width=15)
-btn_change_to_Admin = tkinter.Button(Login_frame,text='Admin',font=font_small,command=change_to_Admin,height=2,width=15)
 btn_change_to_Register = tkinter.Button(Login_frame,text='Create Account',font=font_small,command=change_to_Register,height=2,width=15)
+btn_change_to_Admin = tkinter.Button(Login_frame,text='Admin',font=font_small,command=change_to_Admin,height=2,width=15)
 btn_change_to_Main.place(x=150,y=250)
 btn_change_to_Register.place(x=150,y=500)
 btn_change_to_Admin.place(x=150,y=315)
@@ -343,12 +351,35 @@ btn_UpcomingMovie_18.place(x=320,y=400)
 btn_change_to_Main.place(x=10,y=10)
 
 #-------------------------Description Frame---------------------------------------------
+#images for frame
+image22= Image.open('djangopic.jpg')
 
+image22 = image22.resize((200,250), Image.ANTIALIAS)
+
+img22= ImageTk.PhotoImage(image22)
+
+#lables for description
+lbl_heading_Description = tkinter.Label(Description_frame,text='Django Unchained',font=font_large)
+lbl_description_Description = tkinter.Label(Description_frame,text = "Description: With the help of a German bounty-hunter, a freed slave sets out to \nrescue his wife from a brutal plantation-owner in Mississippi.")
+lbl_cost_Description = tkinter.Label(Description_frame,text= "Cost: $15")
+lbl_Runtime_Description = tkinter.Label(Description_frame,text= "Runtime: 2h 45m")
+lbl_Review_Description = tkinter.Label(Description_frame,text= "IMDB Rating: 8.4/10")
+lbl_image_Description = tkinter.Label(Description_frame,image=img22)
+btn_change_to_Current = tkinter.Button(Description_frame,font = font_small,text ="Back",command = change_to_Current)
+#placing labels
+lbl_heading_Description.place(x=90,y=20)
+lbl_image_Description.place(x=120,y=80)
+lbl_description_Description.place(x=10,y=350)
+lbl_cost_Description.place(x=10,y=400)
+lbl_Runtime_Description.place(x=10,y=430)
+lbl_Review_Description.place(x=10,y=460)
 #making buttons 
 btn_change_to_showtime = tkinter.Button(Description_frame,font = font_small,text ="Book Now",command = change_to_Showtime)
 
 #placing buttons
-btn_change_to_showtime.place(x=185,y=500)
+btn_change_to_showtime.place(x=185,y=550)
+btn_change_to_Current.place(x=10,y=10)
+
 
 #-------------------------Showtime Frame---------------------------------------------
 
@@ -395,7 +426,7 @@ lbl_state_Checkout.place(x=70,y=240)
 lbl_zipcode_Checkout.place(x=70,y=260)
 lbl_orLine_Checkout.place(x=70,y=285)
 btn_paypal_Checkout.place(x=180,y=310)
-btn_change_to_Main = tkinter.Button(Checkout_frame,font = font_small,text ="Back",command = change_to_Main)
+btn_change_to_Showtime = tkinter.Button(Checkout_frame,font = font_small,text ="Back",command = change_to_Showtime)
 
 ent5.place(x=185,y=120)
 ent6.place(x=160,y=140)
@@ -405,10 +436,11 @@ ent9.place(x=125,y=200)
 ent10.place(x=100,y=220)
 ent11.place(x=105,y=240)
 ent12.place(x=125,y=260)
-btn_change_to_Main.place(x=10,y=10)
+btn_change_to_Showtime.place(x=10,y=10)
 
 #placing buttons
 btn_change_to_confirm.place(x=180,y=500)
+
 
 #-------------------------Admin Frame---------------------------------------------
 lbl_adminview_Admin = tkinter.Label(Admin_frame,text='Administration View', font=font_large)
