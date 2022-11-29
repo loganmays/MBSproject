@@ -7,8 +7,8 @@ from PIL import Image, ImageTk
 
 
 filestream = open('userinfo.txt', 'a')
-def RegAccount():#function of the button
-    
+#function to create an account and save it to a txt file
+def RegAccount():
     user_id = str(ent3.get())
     user_pass = str(ent4.get())
     filestream.write(user_id + '\n')
@@ -67,13 +67,17 @@ def login_valid():
             tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
     file1.close()
 
+
+
+
+
 #function to change to the mainscreen after hit login
 def change_to_Main():
     Login_frame.forget()
     Current_frame.forget()
     Upcoming_frame.forget()
     Checkout_frame.forget()
-    Description_frame.forget()
+    Django_Description_frame.forget()
     Main_frame.pack(fill='both', expand=1)
 
 
@@ -93,7 +97,7 @@ def change_to_Register():
 def change_to_Current():
     Login_frame.forget()
     Main_frame.forget()
-    Description_frame.forget()
+    Django_Description_frame.forget()
     Current_frame.pack(fill='both', expand=1)
 
 #function to change frame to upcoming Movies
@@ -108,7 +112,7 @@ def change_to_Description():
     Main_frame.forget()
     Upcoming_frame.forget()
     Current_frame.forget()
-    Description_frame.pack(fill='both', expand=1)
+    Django_Description_frame.pack(fill='both', expand=1)
 
 #function to change frame to Showtimes
 def change_to_Showtime():
@@ -117,7 +121,7 @@ def change_to_Showtime():
     Upcoming_frame.forget()
     Current_frame.forget()
     Checkout_frame.forget()
-    Description_frame.forget()
+    Django_Description_frame.forget()
     Showtime_frame.pack(fill='both', expand=1)
 
 #function to change frame to checkout
@@ -164,7 +168,7 @@ Upcoming_frame = tkinter.Frame(root)
 Current_frame = tkinter.Frame(root)
 Showtime_frame = tkinter.Frame(root)
 Checkout_frame = tkinter.Frame(root)
-Description_frame = tkinter.Frame(root)
+Django_Description_frame = tkinter.Frame(root)
 Admin_frame = tkinter.Frame(root)
 ManageShows_frame = tkinter.Frame(root)
 
@@ -370,7 +374,7 @@ btn_UpcomingMovie_17.place(x=180,y=400)
 btn_UpcomingMovie_18.place(x=320,y=400)
 btn_change_to_Main.place(x=10,y=10)
 
-#-------------------------Description Frame---------------------------------------------
+#-------------------------Django Description Frame---------------------------------------------
 #images for frame
 image22= Image.open('djangopic.jpg')
 
@@ -379,22 +383,22 @@ image22 = image22.resize((200,250), Image.ANTIALIAS)
 img22= ImageTk.PhotoImage(image22)
 
 #lables for description
-lbl_heading_Description = tkinter.Label(Description_frame,text='Django Unchained',font=font_large)
-lbl_description_Description = tkinter.Label(Description_frame,text = "Description: With the help of a German bounty-hunter, a freed slave sets out to \nrescue his wife from a brutal plantation-owner in Mississippi.")
-lbl_cost_Description = tkinter.Label(Description_frame,text= "Cost: $15")
-lbl_Runtime_Description = tkinter.Label(Description_frame,text= "Runtime: 2h 45m")
-lbl_Review_Description = tkinter.Label(Description_frame,text= "IMDB Rating: 8.4/10")
-lbl_image_Description = tkinter.Label(Description_frame,image=img22)
-btn_change_to_Current = tkinter.Button(Description_frame,font = font_small,text ="Back",command = change_to_Current)
+lbl_heading_DjangoDescription = tkinter.Label(Django_Description_frame,text='Django Unchained',font=font_large)
+lbl_description_DjangoDescription = tkinter.Label(Django_Description_frame,text = 'Description: With the help of a German bounty-hunter, a freed slave sets out to \nrescue his wife from a brutal plantation-owner in Mississippi.')
+lbl_cost_DjangoDescription = tkinter.Label(Django_Description_frame,text= 'cost = $15')
+lbl_Runtime_DjangoDescription = tkinter.Label(Django_Description_frame,text= 'Runtime: 2h 45m')
+lbl_Review_DjangoDescription = tkinter.Label(Django_Description_frame,text= 'IMDB Rating: 8.4/10')
+lbl_image_DjangoDescription = tkinter.Label(Django_Description_frame,image=img22)
+btn_change_to_Current = tkinter.Button(Django_Description_frame,font = font_small,text ="Back",command = change_to_Current)
 #placing labels
-lbl_heading_Description.place(x=90,y=20)
-lbl_image_Description.place(x=120,y=80)
-lbl_description_Description.place(x=10,y=350)
-lbl_cost_Description.place(x=10,y=400)
-lbl_Runtime_Description.place(x=10,y=430)
-lbl_Review_Description.place(x=10,y=460)
+lbl_heading_DjangoDescription.place(x=90,y=20)
+lbl_image_DjangoDescription.place(x=120,y=80)
+lbl_description_DjangoDescription.place(x=10,y=350)
+lbl_cost_DjangoDescription.place(x=10,y=400)
+lbl_Runtime_DjangoDescription.place(x=10,y=430)
+lbl_Review_DjangoDescription.place(x=10,y=460)
 #making buttons 
-btn_change_to_showtime = tkinter.Button(Description_frame,font = font_small,text ="Book Now",command = change_to_Showtime)
+btn_change_to_showtime = tkinter.Button(Django_Description_frame,font = font_small,text ="Book Now",command = change_to_Showtime)
 
 #placing buttons
 btn_change_to_showtime.place(x=185,y=550)
