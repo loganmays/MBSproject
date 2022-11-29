@@ -6,23 +6,17 @@ from PIL import Image, ImageTk
 
 
 
-filestream = open('userinfo.txt', 'w')
+filestream = open('userinfo.txt', 'a')
 def RegAccount():#function of the button
     
     user_id = str(ent3.get())
     user_pass = str(ent4.get())
-    print(user_id, file= filestream) 
-    print(user_pass,file = filestream)
+    filestream.write(user_id + '\n')
+    filestream.write(user_pass +'\n')
+    filestream.close()
     msg = 'user id'
     msg2 = 'user pass'
     tkinter.messagebox.showinfo('User: ',msg)
-    #pass_id = str(ent.get())
-    # age=int(ent.get())
-    # if(age<18):
-    #     msg='Sorry, you are not eligible to vote'
-    # else:
-    #     msg='You are eligible to vote!'
-    # tkinter.messagebox.showinfo('Eligibility',msg)
 
 #function to display message after hitting Checkout button
 def CheckoutConfirmed():
@@ -45,6 +39,34 @@ def StatusReport():
     Admin_frame.forget()
     Admin_frame.pack(fill='both', expand=1)
 
+#function to validate user input
+def login_valid():
+    indexer =0
+    usern = str(ent.get())
+    userpass = str(ent2.get())
+    file1 = open('userinfo.txt', 'r')
+    Lines = file1.readlines()
+    for line in Lines:
+        indexer+=1
+        line = line.strip('\n')
+        if usern== line:
+            if userpass==(Lines[indexer].strip('\n')):
+                change_to_Main()
+                break
+            else:
+                tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
+                break
+        elif usern == 'admin':
+            if userpass == 'Password':
+                change_to_Admin()
+                break
+            else:
+                tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
+                break
+        elif usern != line and indexer == len(Lines):
+            tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
+    file1.close()
+
 #function to change to the mainscreen after hit login
 def change_to_Main():
     Login_frame.forget()
@@ -53,7 +75,6 @@ def change_to_Main():
     Checkout_frame.forget()
     Description_frame.forget()
     Main_frame.pack(fill='both', expand=1)
-
 
 
 #function to logout of Main page and go back to login page
@@ -166,12 +187,11 @@ lbl_enterusername_Login.place(x=165,y = 100)
 ent.place(x=165,y=130)
 ent2.place(x=165,y=190)
 #making the buttons for the login frame
-btn_change_to_Main = tkinter.Button(Login_frame,text='Login',font=font_small,command=change_to_Main,height=2,width=15)
+btn_change_to_Main = tkinter.Button(Login_frame,text='Login',font=font_small,command=login_valid,height=2,width=15)
 btn_change_to_Register = tkinter.Button(Login_frame,text='Create Account',font=font_small,command=change_to_Register,height=2,width=15)
-btn_change_to_Admin = tkinter.Button(Login_frame,text='Admin',font=font_small,command=change_to_Admin,height=2,width=15)
 btn_change_to_Main.place(x=150,y=250)
 btn_change_to_Register.place(x=150,y=500)
-btn_change_to_Admin.place(x=150,y=315)
+
 
 #-------------------------Register Frame---------------------------------------------
 #labels for the Register page
