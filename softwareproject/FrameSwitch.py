@@ -15,6 +15,10 @@ moviecost =''
 moviefilename = ''
 global image22
 global img22
+global image23
+global img23
+
+
 
 filestream = open('userinfo.txt', 'a')
 #function to create an account and save it to a txt file
@@ -30,6 +34,26 @@ def RegAccount():
 
 #function to display message after hitting Checkout button
 def CheckoutConfirmed():
+    global smmer
+    global moviefilename
+    with open ('TicketsSold.txt', 'a') as file:
+        if moviefilename =='djangopic.jpg':
+            file.write('Django \n' + (smmer)+'\n')
+        if moviefilename =='rushourpic.jpg':
+            file.write('Rush Hour \n' + (smmer)+'\n')
+        if moviefilename =='elfpic.jpg':
+            file.write('Elf \n' + (smmer)+'\n')
+        if moviefilename =='matrixpic.jpg':
+            file.write('Matrix \n' + (smmer)+'\n')
+        if moviefilename =='onepiecepic.jpg':
+            file.write('One Piece \n' + (smmer)+'\n')
+        if moviefilename =='fightclubpic.jpg':
+            file.write('Fight Club \n' + (smmer)+'\n')
+        if moviefilename =='darkknightpic.jpg':
+            file.write('Dark Knight \n' + (smmer)+'\n')
+        if moviefilename =='sharktale.jpg':
+            file.write('Shark Tale \n' + (smmer)+'\n')
+    file.close()
     msg3 = 'Checkout Successful'
     tkinter.messagebox.showinfo('Checkout',msg3)
     Login_frame.forget()
@@ -77,108 +101,182 @@ def login_valid():
             tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
     file1.close()
 
-
-def saveShowtimeValueDjango():
-    aInt = int(spin_box1.get())
-    bInt = int(spin_box2.get())
-    cInt = int(spin_box3.get())
-    dInt = int(spin_box4.get())
-    eInt = int(spin_box5.get())
-    fInt = int(spin_box6.get())
-    gInt = int(spin_box7.get())
-    summy = aInt + bInt + cInt + dInt + eInt + fInt + gInt
+#function to sum up the tickets sold
+def SumTicketsSold():
+    global spin_box1
+    global spin_box2
+    global spin_box3
+    global spin_box4
+    global spin_box5
+    global spin_box6
+    global spin_box7
+    global smmer
+    global price
+    global TotalCost
+    price =15
+    aInt1 = spin_box1.get()
+    bInt1 = spin_box2.get()
+    cInt1 = spin_box3.get()
+    dInt1 = spin_box4.get()
+    eInt1 = spin_box5.get()
+    fInt1 = spin_box6.get()
+    gInt1 = spin_box7.get()
+    aInt2=0
+    bInt2=0
+    cInt2=0
+    dInt2=0
+    eInt2=0
+    fInt2=0
+    gInt2=0
+    if aInt1!='':
+        aInt2 =int(aInt1)
+    if bInt1!='':
+        bInt2 =int(bInt1)
+    if cInt1!='':
+        cInt2 =int(cInt1)
+    if dInt1!='':
+        dInt2 =int(dInt1)
+    if eInt1!='':
+        eInt2 =int(eInt1)
+    if fInt1!='':
+        fInt2 =int(fInt1)
+    if gInt1!='':
+        gInt2 =int(gInt1)
+    summy = aInt2 + bInt2 + cInt2 + dInt2 + eInt2 + fInt2 + gInt2
+    TotalCost = summy * price
     smmer = str(summy)
-    with open ('showtimeInput.txt', 'a') as file:  
-        file.write('Django = ' + (smmer))
-    Login_frame.forget()
-    Main_frame.forget()
-    Upcoming_frame.forget()
-    Current_frame.forget()
-    Showtime_frame.forget()
-    Checkout_frame.pack(fill='both', expand=1)
+    #Login_frame.forget()
+    #Main_frame.forget()
+    #Upcoming_frame.forget()
+    #Current_frame.forget()
+    #Showtime_frame.forget()
+    #Checkout_frame.pack(fill='both', expand=1)
+    change_to_Checkout()
 
 #function to change to the color of Showing time 1 when clicked
 def change_Showing1_Color():
+    global btn_Showing1
+    global color1
     btn_Showing1.config(fg=next(color1))
 
 #function to change to the color of Showing time 2 when clicked
 def change_Showing2_Color():
+    global color2
+    global btn_Showing2
     btn_Showing2.config(fg=next(color2))
 
 #function to change to the color of Showing time 3 when clicked
 def change_Showing3_Color():
+    global btn_Showing3
+    global color3
     btn_Showing3.config(fg=next(color3))   
 
 #function to change to the color of Showing time 4 when clicked
 def change_Showing4_Color():
+    global btn_Showing4
+    global color4
     btn_Showing4.config(fg=next(color4))
 
 #function to change to the color of Showing time 5 when clicked
 def change_Showing5_Color():
+    global btn_Showing5
+    global color5
     btn_Showing5.config(fg=next(color5))
 
 #function to change to the color of Showing time 6 when clicked
 def change_Showing6_Color():
+    global btn_Showing6
+    global color6
     btn_Showing6.config(fg=next(color6))   
 
 #function to change to the color of Showing time 7 when clicked
 def change_Showing7_Color():
+    global btn_Showing7
+    global color7
     btn_Showing7.config(fg=next(color7))
 
 #function to change to the color of Showing time 8 when clicked
 def change_Showing8_Color():
+    global btn_Showing8
+    global color8
     btn_Showing8.config(fg=next(color8))
 
 #function to change to the color of Showing time 9 when clicked
 def change_Showing9_Color():
+    global btn_Showing9
+    global color9
     btn_Showing9.config(fg=next(color9))
 
 #function to change to the color of Showing time 10 when clicked
 def change_Showing10_Color():
+    global btn_Showing10
+    global color10
     btn_Showing10.config(fg=next(color10))
 
 #function to change to the color of Showing time 11 when clicked
 def change_Showing11_Color():
+    global btn_Showing11
+    global color11
     btn_Showing11.config(fg=next(color11))   
 
 #function to change to the color of Showing time 12 when clicked
 def change_Showing12_Color():
+    global btn_Showing12
+    global color12
     btn_Showing12.config(fg=next(color12))
 
 #function to change to the color of Showing time 13 when clicked
 def change_Showing13_Color():
+    global btn_Showing13 
+    global color13
     btn_Showing13.config(fg=next(color13))
 
 #function to change to the color of Showing time 14 when clicked
 def change_Showing14_Color():
+    global btn_Showing14
+    global color14
     btn_Showing14.config(fg=next(color14))   
 
 #function to change to the color of Showing time 15 when clicked
 def change_Showing15_Color():
+    global btn_Showing15
+    global color15
     btn_Showing15.config(fg=next(color15))
 
 #function to change to the color of Showing time 16 when clicked
 def change_Showing16_Color():
+    global btn_Showing16
+    global color16
     btn_Showing16.config(fg=next(color16))
 
 #function to change to the color of Showing time 17 when clicked
 def change_Showing17_Color():
+    global btn_Showing17
+    global color17
     btn_Showing17.config(fg=next(color17))
 
 #function to change to the color of Showing time 18 when clicked
 def change_Showing18_Color():
+    global btn_Showing18
+    global color18
     btn_Showing18.config(fg=next(color18))   
 
 #function to change to the color of Showing time 19 when clicked
 def change_Showing19_Color():
+    global btn_Showing19
+    global color19
     btn_Showing19.config(fg=next(color19))
 
 #function to change to the color of Showing time 20 when clicked
 def change_Showing20_Color():
+    global btn_Showing20
+    global color20
     btn_Showing20.config(fg=next(color20))
 
 #function to change to the color of Showing time 21 when clicked
 def change_Showing21_Color():
+    global btn_Showing21
+    global color21
     btn_Showing21.config(fg=next(color21))
 
 
@@ -224,10 +322,19 @@ def change_to_Description():
     Main_frame.forget()
     Upcoming_frame.forget()
     Current_frame.forget()
+    Showtime_frame.forget()
     Description_Frame.pack(fill='both', expand=1)
 
 #function to change frame to Showtimes
 def change_to_Showtime():
+    for widget in Showtime_frame.winfo_children():
+        widget.destroy()
+    global image23
+    global img23
+    global moviefilename
+    image23 = Image.open(moviefilename)
+    image23 = image23.resize((200,250), Image.ANTIALIAS)
+    img23 = ImageTk.PhotoImage(image23)
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -235,15 +342,19 @@ def change_to_Showtime():
     Checkout_frame.forget()
     Description_Frame.forget()
     Showtime_frame.pack(fill='both', expand=1)
+    showtimeframe()
 
 #function to change frame to checkout
 def change_to_Checkout():
+    for widget in Checkout_frame.winfo_children():
+        widget.destroy()
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
     Current_frame.forget()
     Showtime_frame.forget()
     Checkout_frame.pack(fill='both', expand=1)
+    checkout()
 
 #function to change frame to Admin
 def change_to_Admin():
@@ -918,7 +1029,7 @@ lbl_enterusername_Register.place(x=165,y = 100)
 ent3.place(x=165,y=130)
 ent4.place(x=165,y=190)
 #making buttons for the Register Frame
-btn_change_to_Login = tkinter.Button(Register_frame,text='Sign In',font=font_small,command=change_to_Login,height=2,width=15)
+btn_change_to_Login = tkinter.Button(Register_frame,text='Back',font=font_small,command=change_to_Login,height=2,width=15)
 btn_RegisterAccount=tkinter.Button(Register_frame,text="Register Account",command =RegAccount,height=2,width=15)
 btn_change_to_Login.place(x=150,y=500)
 btn_RegisterAccount.place(x=165,y=250)
@@ -1134,180 +1245,235 @@ def descriptionframe2():
 
 
 #-------------------------Showtime Frame---------------------------------------------
-# Open image
-image23 = Image.open('djangopic.jpg')
-image23 = image23.resize((200,250), Image.ANTIALIAS)
-img23 = ImageTk.PhotoImage(image23)
+def showtimeframe():
+    global btn_Showing1
+    global btn_Showing2
+    global btn_Showing3
+    global btn_Showing4
+    global btn_Showing5
+    global btn_Showing6
+    global btn_Showing7
+    global btn_Showing8
+    global btn_Showing9
+    global btn_Showing10
+    global btn_Showing11
+    global btn_Showing12
+    global btn_Showing13
+    global btn_Showing14
+    global btn_Showing15
+    global btn_Showing16
+    global btn_Showing17
+    global btn_Showing18
+    global btn_Showing19
+    global btn_Showing20
+    global btn_Showing21
+    global color1
+    global color2
+    global color3
+    global color4
+    global color5
+    global color6
+    global color7
+    global color8
+    global color9
+    global color10
+    global color11
+    global color12
+    global color13
+    global color14
+    global color15
+    global color16
+    global color17
+    global color18
+    global color19
+    global color20
+    global color21
+    global spin_box1
+    global spin_box2
+    global spin_box3
+    global spin_box4
+    global spin_box5
+    global spin_box6
+    global spin_box7
 
-# Location of the image
-lbl_image_Showtime  = tkinter.Label(Showtime_frame, image = img23)
-lbl_image_Showtime.place(x=240, y=150)
 
-# Selected movie title
-lbl_heading_Showtime = tkinter.Label(Showtime_frame,text='Django',font=font_large)
-lbl_heading_Showtime.pack(pady=10)
+    # Location of the image
+    lbl_image_Showtime  = tkinter.Label(Showtime_frame, image = img23)
+    lbl_image_Showtime.place(x=240, y=150)
 
-# Sunday title and spinbox
-lbl_sunday_Showtime = tkinter.Label(Showtime_frame,text='Sunday',font=font_small)
-lbl_sunday_Showtime.place(x=20, y=60)
-btn_Showing1 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing1_Color)
-btn_Showing1.place(x=10, y=95)
-btn_Showing2 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing2_Color)
-btn_Showing2.place(x=90, y=95)
-btn_Showing3 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing3_Color)
-btn_Showing3.place(x=170, y=95)
-color1 = cycle(['green', 'black', 'green', btn_Showing1['fg']])
-color2 = cycle(['green', 'black', 'green', btn_Showing2['fg']])
-color3 = cycle(['green', 'black', 'green', btn_Showing3['fg']])
-spin_box1 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box1.place(x=110, y=62)
+    # Selected movie title
+    lbl_heading_Showtime = tkinter.Label(Showtime_frame,text='ShowTimes',font=font_large)
+    lbl_heading_Showtime.pack(pady=10)
 
-# Monday title and spinbox
-lbl_monday_Showtime = tkinter.Label(Showtime_frame,text='Monday',font=font_small)
-lbl_monday_Showtime.place(x=20, y=135)
-btn_Showing4 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing4_Color)
-btn_Showing4.place(x=10, y=170)
-btn_Showing5 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing5_Color)
-btn_Showing5.place(x=90, y=170)
-btn_Showing6 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing6_Color)
-btn_Showing6.place(x=170, y=170)
-color4 = cycle(['green', 'black', 'green', btn_Showing4['fg']])
-color5 = cycle(['green', 'black', 'green', btn_Showing5['fg']])
-color6 = cycle(['green', 'black', 'green', btn_Showing6['fg']])
-spin_box2 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box2.place(x=110, y=137)
+    # Sunday title and spinbox
+    lbl_sunday_Showtime = tkinter.Label(Showtime_frame,text='Sunday',font=font_small)
+    lbl_sunday_Showtime.place(x=20, y=60)
+    btn_Showing1 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing1_Color)
+    btn_Showing1.place(x=10, y=95)
+    btn_Showing2 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing2_Color)
+    btn_Showing2.place(x=90, y=95)
+    btn_Showing3 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing3_Color)
+    btn_Showing3.place(x=170, y=95)
+    color1 = cycle(['green', 'black', 'green', btn_Showing1['fg']])
+    color2 = cycle(['green', 'black', 'green', btn_Showing2['fg']])
+    color3 = cycle(['green', 'black', 'green', btn_Showing3['fg']])
+    spin_box1 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box1.place(x=110, y=62)
 
-# Tuesday title and spinbox
-lbl_tuesday_Showtime = tkinter.Label(Showtime_frame,text='Tuesday',font=font_small)
-lbl_tuesday_Showtime.place(x=20, y=210)
-btn_Showing7 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing7_Color)
-btn_Showing7.place(x=10, y=245)
-btn_Showing8 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing8_Color)
-btn_Showing8.place(x=90, y=245)
-btn_Showing9 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing9_Color)
-btn_Showing9.place(x=170, y=245)
-color7 = cycle(['green', 'black', 'green', btn_Showing7['fg']])
-color8 = cycle(['green', 'black', 'green', btn_Showing8['fg']])
-color9 = cycle(['green', 'black', 'green', btn_Showing9['fg']])
-spin_box3 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box3.place(x=110, y=212)
+    # Monday title and spinbox
+    lbl_monday_Showtime = tkinter.Label(Showtime_frame,text='Monday',font=font_small)
+    lbl_monday_Showtime.place(x=20, y=135)
+    btn_Showing4 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing4_Color)
+    btn_Showing4.place(x=10, y=170)
+    btn_Showing5 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing5_Color)
+    btn_Showing5.place(x=90, y=170)
+    btn_Showing6 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing6_Color)
+    btn_Showing6.place(x=170, y=170)
+    color4 = cycle(['green', 'black', 'green', btn_Showing4['fg']])
+    color5 = cycle(['green', 'black', 'green', btn_Showing5['fg']])
+    color6 = cycle(['green', 'black', 'green', btn_Showing6['fg']])
+    spin_box2 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box2.place(x=110, y=137)
 
-# Wednesday title and spinbox
-lbl_wednesday_Showtime = tkinter.Label(Showtime_frame,text='Wednesday',font=font_small)
-lbl_wednesday_Showtime.place(x=20, y=285)
-btn_Showing10 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing10_Color)
-btn_Showing10.place(x=10, y=320)
-btn_Showing11 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing11_Color)
-btn_Showing11.place(x=90, y=320)
-btn_Showing12 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing12_Color)
-btn_Showing12.place(x=170, y=320)
-color10 = cycle(['green', 'black', 'green', btn_Showing10['fg']])
-color11 = cycle(['green', 'black', 'green', btn_Showing11['fg']])
-color12 = cycle(['green', 'black', 'green', btn_Showing12['fg']])
-spin_box4 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box4.place(x=110, y=287)
+    # Tuesday title and spinbox
+    lbl_tuesday_Showtime = tkinter.Label(Showtime_frame,text='Tuesday',font=font_small)
+    lbl_tuesday_Showtime.place(x=20, y=210)
+    btn_Showing7 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing7_Color)
+    btn_Showing7.place(x=10, y=245)
+    btn_Showing8 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing8_Color)
+    btn_Showing8.place(x=90, y=245)
+    btn_Showing9 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing9_Color)
+    btn_Showing9.place(x=170, y=245)
+    color7 = cycle(['green', 'black', 'green', btn_Showing7['fg']])
+    color8 = cycle(['green', 'black', 'green', btn_Showing8['fg']])
+    color9 = cycle(['green', 'black', 'green', btn_Showing9['fg']])
+    spin_box3 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box3.place(x=110, y=212)
 
-# Thursday title and spinbox
-lbl_thursday_Showtime = tkinter.Label(Showtime_frame,text='Thursday',font=font_small)
-lbl_thursday_Showtime.place(x=20, y=360)
-btn_Showing13 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing13_Color)
-btn_Showing13.place(x=10, y=395)
-btn_Showing14 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing14_Color)
-btn_Showing14.place(x=90, y=395)
-btn_Showing15 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing15_Color)
-btn_Showing15.place(x=170, y=395)
-color13 = cycle(['green', 'black', 'green', btn_Showing13['fg']])
-color14 = cycle(['green', 'black', 'green', btn_Showing14['fg']])
-color15 = cycle(['green', 'black', 'green', btn_Showing15['fg']])
-spin_box5 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box5.place(x=110, y=362)
+    # Wednesday title and spinbox
+    lbl_wednesday_Showtime = tkinter.Label(Showtime_frame,text='Wednesday',font=font_small)
+    lbl_wednesday_Showtime.place(x=20, y=285)
+    btn_Showing10 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing10_Color)
+    btn_Showing10.place(x=10, y=320)
+    btn_Showing11 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing11_Color)
+    btn_Showing11.place(x=90, y=320)
+    btn_Showing12 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing12_Color)
+    btn_Showing12.place(x=170, y=320)
+    color10 = cycle(['green', 'black', 'green', btn_Showing10['fg']])
+    color11 = cycle(['green', 'black', 'green', btn_Showing11['fg']])
+    color12 = cycle(['green', 'black', 'green', btn_Showing12['fg']])
+    spin_box4 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box4.place(x=110, y=287)
 
-# Friday title and spinbox
-lbl_friday_Showtime = tkinter.Label(Showtime_frame,text='Friday',font=font_small)
-lbl_friday_Showtime.place(x=20, y=435)
-btn_Showing16 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing16_Color)
-btn_Showing16.place(x=10, y=470)
-btn_Showing17 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing17_Color)
-btn_Showing17.place(x=90, y=470)
-btn_Showing18 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing18_Color)
-btn_Showing18.place(x=170, y=470)
-color16 = cycle(['green', 'black', 'green', btn_Showing16['fg']])
-color17 = cycle(['green', 'black', 'green', btn_Showing17['fg']])
-color18 = cycle(['green', 'black', 'green', btn_Showing18['fg']])
-spin_box6 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box6.place(x=110, y=437)
+    # Thursday title and spinbox
+    lbl_thursday_Showtime = tkinter.Label(Showtime_frame,text='Thursday',font=font_small)
+    lbl_thursday_Showtime.place(x=20, y=360)
+    btn_Showing13 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing13_Color)
+    btn_Showing13.place(x=10, y=395)
+    btn_Showing14 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing14_Color)
+    btn_Showing14.place(x=90, y=395)
+    btn_Showing15 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing15_Color)
+    btn_Showing15.place(x=170, y=395)
+    color13 = cycle(['green', 'black', 'green', btn_Showing13['fg']])
+    color14 = cycle(['green', 'black', 'green', btn_Showing14['fg']])
+    color15 = cycle(['green', 'black', 'green', btn_Showing15['fg']])
+    spin_box5 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box5.place(x=110, y=362)
 
-# Saturday title and spinbox
-lbl_saturday_Showtime = tkinter.Label(Showtime_frame,text='Saturday',font=font_small)
-lbl_saturday_Showtime.place(x=20, y=510)
-btn_Showing19 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing19_Color)
-btn_Showing19.place(x=10, y=545)
-btn_Showing20 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing20_Color)
-btn_Showing20.place(x=90, y=545)
-btn_Showing21 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing21_Color)
-btn_Showing21.place(x=170, y=545)
-color19 = cycle(['green', 'black', 'green', btn_Showing19['fg']])
-color20 = cycle(['green', 'black', 'green', btn_Showing20['fg']])
-color21 = cycle(['green', 'black', 'green', btn_Showing21['fg']])
-spin_box7 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
-spin_box7.place(x=110, y=512)
+    # Friday title and spinbox
+    lbl_friday_Showtime = tkinter.Label(Showtime_frame,text='Friday',font=font_small)
+    lbl_friday_Showtime.place(x=20, y=435)
+    btn_Showing16 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing16_Color)
+    btn_Showing16.place(x=10, y=470)
+    btn_Showing17 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing17_Color)
+    btn_Showing17.place(x=90, y=470)
+    btn_Showing18 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing18_Color)
+    btn_Showing18.place(x=170, y=470)
+    color16 = cycle(['green', 'black', 'green', btn_Showing16['fg']])
+    color17 = cycle(['green', 'black', 'green', btn_Showing17['fg']])
+    color18 = cycle(['green', 'black', 'green', btn_Showing18['fg']])
+    spin_box6 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box6.place(x=110, y=437)
 
-#making buttons 
-btn_change_to_checkout = tkinter.Button(Showtime_frame,font = font_large,text ="Checkout",width=7,height=2,command = saveShowtimeValueDjango)
+    # Saturday title and spinbox
+    lbl_saturday_Showtime = tkinter.Label(Showtime_frame,text='Saturday',font=font_small)
+    lbl_saturday_Showtime.place(x=20, y=510)
+    btn_Showing19 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing19_Color)
+    btn_Showing19.place(x=10, y=545)
+    btn_Showing20 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing20_Color)
+    btn_Showing20.place(x=90, y=545)
+    btn_Showing21 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing21_Color)
+    btn_Showing21.place(x=170, y=545)
+    color19 = cycle(['green', 'black', 'green', btn_Showing19['fg']])
+    color20 = cycle(['green', 'black', 'green', btn_Showing20['fg']])
+    color21 = cycle(['green', 'black', 'green', btn_Showing21['fg']])
+    spin_box7 = ttk.Spinbox(Showtime_frame, from_ = 0, to = 10, width=10)
+    spin_box7.place(x=110, y=512)
 
-#placing buttons
-btn_change_to_checkout.place(x=275,y=480)
+    #making buttons 
+    btn_change_to_checkout = tkinter.Button(Showtime_frame,font = font_large,text ="Checkout",width=7,height=2,command = SumTicketsSold)
+    btn_change_to_description = tkinter.Button(Showtime_frame,font = font_small,text ="Back",command = change_to_Description)
+    btn_change_to_description.place(x=10,y=10)
+
+    #placing buttons
+    btn_change_to_checkout.place(x=275,y=480)
 
 #-------------------------Checkout Frame---------------------------------------------
-#making buttons 
-btn_change_to_confirm = tkinter.Button(Checkout_frame,font = font_small,text ="Confirm",command = CheckoutConfirmed)
+def checkout():
+    global TotalCost
+    #making buttons 
+    btn_change_to_confirm = tkinter.Button(Checkout_frame,font = font_small,text ="Confirm",command = CheckoutConfirmed)
 
-lbl_username_Checkout = tkinter.Label(Checkout_frame,text='Checkout', font=font_large)
-lbl_creditcardnumber_Checkout = tkinter.Label(Checkout_frame,text='Credit Card Number:')
-lbl_expirationdate_Checkout = tkinter.Label(Checkout_frame,text='Expiration Date:')
-lbl_cvv_Checkout = tkinter.Label(Checkout_frame,text='CVV:')
-lbl_nameoncard_Checkout = tkinter.Label(Checkout_frame,text='Name on Card:')
-lbl_addressline_Checkout = tkinter.Label(Checkout_frame,text='Address:')
-lbl_city_Checkout = tkinter.Label(Checkout_frame,text='City:')
-lbl_state_Checkout = tkinter.Label(Checkout_frame,text='State:')
-lbl_zipcode_Checkout = tkinter.Label(Checkout_frame,text='ZIP code:')
-lbl_orLine_Checkout = tkinter.Label(Checkout_frame, text='---------------------------or---------------------------')
-btn_paypal_Checkout = tkinter.Button(Checkout_frame,font = font_small,text ="PayPal")
+    lbl_username_Checkout = tkinter.Label(Checkout_frame,text='Checkout', font=font_large)
+    lbl_creditcardnumber_Checkout = tkinter.Label(Checkout_frame,text='Credit Card Number:')
+    lbl_expirationdate_Checkout = tkinter.Label(Checkout_frame,text='Expiration Date:')
+    lbl_cvv_Checkout = tkinter.Label(Checkout_frame,text='CVV:')
+    lbl_nameoncard_Checkout = tkinter.Label(Checkout_frame,text='Name on Card:')
+    lbl_addressline_Checkout = tkinter.Label(Checkout_frame,text='Address:')
+    lbl_city_Checkout = tkinter.Label(Checkout_frame,text='City:')
+    lbl_state_Checkout = tkinter.Label(Checkout_frame,text='State:')
+    lbl_zipcode_Checkout = tkinter.Label(Checkout_frame,text='ZIP code:')
+    lbl_orLine_Checkout = tkinter.Label(Checkout_frame, text='---------------------------or---------------------------')
+    btn_paypal_Checkout = tkinter.Button(Checkout_frame,font = font_small,text ="PayPal")
+    lbl_PriceofTickets_Checkout = tkinter.Label(Checkout_frame,text='Your Total is: $',font = font_small)
+    lbl_PriceofTickets2_Checkout = tkinter.Label(Checkout_frame,text=TotalCost,font=font_small)
 
-ent5 = Entry(Checkout_frame)
-ent6 = Entry(Checkout_frame)
-ent7 = Entry(Checkout_frame)
-ent8 = Entry(Checkout_frame)
-ent9 = Entry(Checkout_frame)
-ent10 = Entry(Checkout_frame)
-ent11 = Entry(Checkout_frame)
-ent12 = Entry(Checkout_frame)
+    ent5 = Entry(Checkout_frame)
+    ent6 = Entry(Checkout_frame)
+    ent7 = Entry(Checkout_frame)
+    ent8 = Entry(Checkout_frame)
+    ent9 = Entry(Checkout_frame)
+    ent10 = Entry(Checkout_frame)
+    ent11 = Entry(Checkout_frame)
+    ent12 = Entry(Checkout_frame)
 
-lbl_username_Checkout.pack(padx=150,pady=20)
-lbl_creditcardnumber_Checkout.place(x=70,y=120)
-lbl_expirationdate_Checkout.place(x=70,y=140)
-lbl_cvv_Checkout.place(x=70,y=160)
-lbl_nameoncard_Checkout.place(x=70,y=180)
-lbl_addressline_Checkout.place(x=70,y=200)
-lbl_city_Checkout.place(x=70,y=220)
-lbl_state_Checkout.place(x=70,y=240)
-lbl_zipcode_Checkout.place(x=70,y=260)
-lbl_orLine_Checkout.place(x=70,y=285)
-btn_paypal_Checkout.place(x=180,y=310)
-btn_change_to_Showtime = tkinter.Button(Checkout_frame,font = font_small,text ="Back",command = change_to_Showtime)
+    lbl_username_Checkout.pack(padx=150,pady=20)
+    lbl_creditcardnumber_Checkout.place(x=70,y=120)
+    lbl_expirationdate_Checkout.place(x=70,y=140)
+    lbl_cvv_Checkout.place(x=70,y=160)
+    lbl_nameoncard_Checkout.place(x=70,y=180)
+    lbl_addressline_Checkout.place(x=70,y=200)
+    lbl_city_Checkout.place(x=70,y=220)
+    lbl_state_Checkout.place(x=70,y=240)
+    lbl_zipcode_Checkout.place(x=70,y=260)
+    lbl_orLine_Checkout.place(x=70,y=285)
+    lbl_PriceofTickets_Checkout.place(x=70,y=400)
+    lbl_PriceofTickets2_Checkout.place(x=181,y=400)
+    btn_paypal_Checkout.place(x=180,y=310)
+    btn_change_to_Showtime = tkinter.Button(Checkout_frame,font = font_small,text ="Back",command = change_to_Showtime)
 
-ent5.place(x=185,y=120)
-ent6.place(x=160,y=140)
-ent7.place(x=105,y=160)
-ent8.place(x=160,y=180)
-ent9.place(x=125,y=200)
-ent10.place(x=100,y=220)
-ent11.place(x=105,y=240)
-ent12.place(x=125,y=260)
-btn_change_to_Showtime.place(x=10,y=10)
+    ent5.place(x=185,y=120)
+    ent6.place(x=160,y=140)
+    ent7.place(x=105,y=160)
+    ent8.place(x=160,y=180)
+    ent9.place(x=125,y=200)
+    ent10.place(x=100,y=220)
+    ent11.place(x=105,y=240)
+    ent12.place(x=125,y=260)
+    btn_change_to_Showtime.place(x=10,y=10)
 
-#placing buttons
-btn_change_to_confirm.place(x=180,y=500)
+    #placing buttons
+    btn_change_to_confirm.place(x=180,y=500)
 
 
 #-------------------------Admin Frame---------------------------------------------
