@@ -18,6 +18,43 @@ global img22
 global image23
 global img23
 global diehard_price,Rushhour_price,elf_price,matrix_price,onepiece_price,fightclub_price,batman_price,django_price,sharktale_price
+global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
+global diehardsun1,diehardsun2,diehardsun3
+global rushhoursun1,rushhoursun2,rushhoursun3
+global elfsun1,elfsun2,elfsun3
+global matrixsun1,matrixsun2,matrixsun3
+global onepiecesun1,onepiecesun2,onepiecesun3
+global fightclubsun1,fightclubsun2,fightclubsun3
+global batmansun1,batmansun2,batmansun3
+global sharktalesun1,sharktalesun2,sharktalesun3
+djangosun1 ='1:00 PM'
+djangosun2 = '3:45 PM'
+djangosun3 = '7:00PM'
+diehardsun1 ='1:00 PM'
+diehardsun2 = '3:45 PM'
+diehardsun3 = '7:00PM'
+rushhoursun1 ='1:00 PM'
+rushhoursun2 = '3:45 PM'
+rushhoursun3 = '7:00PM'
+elfsun1 ='1:00 PM'
+elfsun2 = '3:45 PM'
+elfsun3 = '7:00PM'
+matrixsun1 ='1:00 PM'
+matrixsun2 = '3:45 PM'
+matrixsun3 = '7:00PM'
+onepiecesun1 ='1:00 PM'
+onepiecesun2 = '3:45 PM'
+onepiecesun3 = '7:00PM'
+fightclubsun1 ='1:00 PM'
+fightclubsun2 = '3:45 PM'
+fightclubsun3 = '7:00PM'
+batmansun1 ='1:00 PM'
+batmansun2 = '3:45 PM'
+batmansun3 = '7:00PM'
+sharktalesun1 ='1:00 PM'
+sharktalesun2 = '3:45 PM'
+sharktalesun3 = '7:00PM'
+
 diehard_price=15
 Rushhour_price=15
 elf_price=15
@@ -35,44 +72,55 @@ filestream = open('userinfo.txt', 'a')
 def RegAccount():
     user_id = str(ent3.get())
     user_pass = str(ent4.get())
-    filestream.write(user_id + '\n')
-    filestream.write(user_pass +'\n')
-    filestream.close()
-    msg = 'user id'
-    msg2 = 'user pass'
-    tkinter.messagebox.showinfo('User: ',msg)
+    if user_id ==''or user_pass=='':
+        tkinter.messagebox.showinfo('Account Creation Error','Please fill in all boxes')
+    else:
+        filestream.write(user_id + '\n')
+        filestream.write(user_pass +'\n')
+        filestream.close()
+        msg = 'Account Successfully Created'
+        tkinter.messagebox.showinfo('User: ',msg)
+        change_to_Login()
 
 #function to display message after hitting Checkout button
 def CheckoutConfirmed():
     global smmer
     global moviefilename
-    with open ('TicketsSold.txt', 'a') as file:
-        if moviefilename =='diehardpic.jpg':
-            file.write('Die Hard\n' + (smmer)+'\n')
-        if moviefilename =='djangopic.jpg':
-            file.write('Django\n' + (smmer)+'\n')
-        if moviefilename =='rushhourpic.jpg':
-            file.write('Rush Hour\n' + (smmer)+'\n')
-        if moviefilename =='elfpic.jpg':
-            file.write('Elf\n' + (smmer)+'\n')
-        if moviefilename =='matrixpic.jpg':
-            file.write('Matrix\n' + (smmer)+'\n')
-        if moviefilename =='onepiecepic.jpg':
-            file.write('One Piece\n' + (smmer)+'\n')
-        if moviefilename =='fightclubpic.jpg':
-            file.write('Fight Club\n' + (smmer)+'\n')
-        if moviefilename =='darkknightpic.jpg':
-            file.write('Dark Knight\n' + (smmer)+'\n')
-        if moviefilename =='sharktale.jpg':
-            file.write('Shark Tale\n' + (smmer)+'\n')
-    file.close()
-    msg3 = 'Checkout Successful'
-    tkinter.messagebox.showinfo('Checkout',msg3)
-    Login_frame.forget()
-    Current_frame.forget()
-    Upcoming_frame.forget()
-    Checkout_frame.forget()
-    Main_frame.pack(fill='both', expand=1)
+    global ent5,ent6,ent7,ent8,ent9,ent10,ent11,ent12
+    cardnumber = str(ent5.get())
+    expdate=str(ent6.get())
+    cvv=str(ent7.get())
+    namecard=str(ent8.get())
+    address=str(ent9.get())
+    city=str(ent10.get())
+    state=str(ent11.get())
+    zipco=str(ent12.get())
+    if cardnumber==''or expdate==''or cvv==''or namecard==''or address==''or city==''or state==''or zipco=='':
+        tkinter.messagebox.showinfo('Checkout Failure','Please fill out all the boxes')
+    else:
+        with open ('TicketsSold.txt', 'a') as file:
+            if moviefilename =='diehardpic.jpg':
+                file.write('Die Hard\n' + (smmer)+'\n')
+            if moviefilename =='djangopic.jpg':
+                file.write('Django\n' + (smmer)+'\n')
+            if moviefilename =='rushhourpic.jpg':
+                file.write('Rush Hour\n' + (smmer)+'\n')
+            if moviefilename =='elfpic.jpg':
+                file.write('Elf\n' + (smmer)+'\n')
+            if moviefilename =='matrixpic.jpg':
+                file.write('Matrix\n' + (smmer)+'\n')
+            if moviefilename =='onepiecepic.jpg':
+                file.write('One Piece\n' + (smmer)+'\n')
+            if moviefilename =='fightclubpic.jpg':
+                file.write('Fight Club\n' + (smmer)+'\n')
+            if moviefilename =='darkknightpic.jpg':
+                file.write('Dark Knight\n' + (smmer)+'\n')
+            if moviefilename =='sharktale.jpg':
+                file.write('Shark Tale\n' + (smmer)+'\n')
+        file.close()
+        msg3 = 'Checkout Successful'
+        tkinter.messagebox.showinfo('Checkout',msg3)
+        change_to_Main()
 
 #function to display message of status report
 def StatusReport():
@@ -125,22 +173,26 @@ def login_valid():
     for line in Lines:
         indexer+=1
         line = line.strip('\n')
-        if usern== line:
-            if userpass==(Lines[indexer].strip('\n')):
-                change_to_Main()
-                break
-            else:
-                tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
-                break
-        elif usern == 'admin':
-            if userpass == 'Password':
-                change_to_Admin()
-                break
-            else:
-                tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
-                break
-        elif usern != line and indexer == len(Lines):
+        if usern ==''or userpass=='':
             tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
+            break
+        else:
+            if usern== line:
+                if userpass==(Lines[indexer].strip('\n')):
+                    change_to_Main()
+                    break
+                else:
+                    tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
+                    break
+            elif usern == 'admin':
+                if userpass == 'Password':
+                    change_to_Admin()
+                    break
+                else:
+                    tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
+                    break
+            elif usern != line and indexer == len(Lines):
+                tkinter.messagebox.showinfo('Login Invalid','Username or Password is Incorrect')
     file1.close()
 
 #function to sum up the tickets sold
@@ -204,6 +256,7 @@ def SumTicketsSold():
 def diehard_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -214,12 +267,17 @@ def diehard_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Die Hard'
     moviecost2 ='Cost= $'+str(diehard_price)
+    timemovie1 = diehardsun1
+    timemovie2 = diehardsun2
+    timemovie3 = diehardsun3
+
     edit_show()
 
 #function to change the editing page to have Rush hour info
 def rushhour_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -230,12 +288,17 @@ def rushhour_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Rush Hour'
     moviecost2 ='Cost= $'+str(Rushhour_price)
+    timemovie1 = rushhoursun1
+    timemovie2 = rushhoursun2
+    timemovie3 = rushhoursun3
+
     edit_show()
 
 #function to change the editing page to have Elf info
 def elf_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -246,12 +309,17 @@ def elf_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Elf'
     moviecost2 ='Cost= $'+str(elf_price)
+    timemovie1 = elfsun1
+    timemovie2 = elfsun2
+    timemovie3 = elfsun3
+
     edit_show()
 
 #function to change the editing page to have Matrix info
 def matrix_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -262,12 +330,17 @@ def matrix_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Matrix'
     moviecost2 ='Cost= $'+str(matrix_price)
+    timemovie1 = matrixsun1
+    timemovie2 = matrixsun2
+    timemovie3 = matrixsun3
+
     edit_show()
 
 #function to change the editing page to have One Piece info
 def onepiece_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -278,12 +351,17 @@ def onepiece_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='One Piece'
     moviecost2 ='Cost= $'+str(onepiece_price)
+    timemovie1 = onepiecesun1
+    timemovie2 = onepiecesun2
+    timemovie3 = onepiecesun3
+
     edit_show()
 
 #function to change the editing page to have Fight Club info
 def fightclub_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -294,12 +372,17 @@ def fightclub_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Fight Club'
     moviecost2 ='Cost= $'+str(fightclub_price)
+    timemovie1 = fightclubsun1
+    timemovie2 = fightclubsun2
+    timemovie3 = fightclubsun3
+
     edit_show()
 
 #function to change the editing page to have Batman info
 def batman_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -310,12 +393,17 @@ def batman_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Dark Knight'
     moviecost2 ='Cost= $'+str(batman_price)
+    timemovie1 = batmansun1
+    timemovie2 = batmansun2
+    timemovie3 = batmansun3
+
     edit_show()
 
 #function to change the editing page to have Django info
 def django_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -326,12 +414,16 @@ def django_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Django Unchained'
     moviecost2 ='Cost= $'+str(django_price)
+    timemovie1 = djangosun1
+    timemovie2 = djangosun2
+    timemovie3 = djangosun3
     edit_show()
 
 #function to change the editing page to have Shark Tale info
 def SharkTale_edit():
     global moviename
     global moviecost2
+    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -342,31 +434,119 @@ def SharkTale_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Shark Tale'
     moviecost2 ='Cost= $'+str(sharktale_price)
+    timemovie1 = sharktalesun1
+    timemovie2 = sharktalesun2
+    timemovie3 = sharktalesun3
+
     edit_show()
 
 #Function to apply the changes the admin made
 def apply_edit():
     global ent15
     global diehard_price,matrix_price,Rushhour_price,elf_price,onepiece_price,fightclub_price,batman_price,django_price,sharktale_price
-    new_price = int(ent15.get())
+    global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
+    global diehardsun1,diehardsun2,diehardsun3
+    global rushhoursun1,rushhoursun2,rushhoursun3
+    global elfsun1,elfsun2,elfsun3
+    global matrixsun1,matrixsun2,matrixsun3
+    global onepiecesun1,onepiecesun2,onepiecesun3
+    global fightclubsun1,fightclubsun2,fightclubsun3
+    global batmansun1,batmansun2,batmansun3
+    global sharktalesun1,sharktalesun2,sharktalesun3
+    new_price = str(ent15.get())
+    newtime1 = str(ent16.get())
+    newtime2 =str(ent17.get())
+    newtime3 =str(ent18.get())
     if moviename =='Die Hard':
-        diehard_price = new_price
+        if new_price!='':
+            diehard_price = int(new_price)
+        if newtime1!='':
+            diehardsun1=newtime1
+        if newtime2!='':
+            diehardsun2=newtime2
+        if newtime3!='':
+            diehardsun3=newtime3
+
     if moviename =='Rush Hour':
-        Rushhour_price = new_price
+        if new_price!='':
+            Rushhour_price = int(new_price)
+        if newtime1!='':
+            rushhoursun1=newtime1
+        if newtime2!='':
+            rushhoursun2=newtime2
+        if newtime3!='':
+            rushhoursun3=newtime3
+
     if moviename =='Elf':
-        elf_price = new_price
+        if new_price!='':
+            elf_price = int(new_price)
+        if newtime1!='':
+            elfsun1=newtime1
+        if newtime2!='':
+            elfsun2=newtime2
+        if newtime3!='':
+            elfsun3=newtime3
+
     if moviename =='The Matrix':
-        matrix_price = new_price
+        if new_price!='':
+            matrix_price = int(new_price)
+        if newtime1!='':
+            matrixsun1=newtime1
+        if newtime2!='':
+            matrixsun2=newtime2
+        if newtime3!='':
+            matrixsun3=newtime3
+
     if moviename =='One Piece':
-        onepiece_price = new_price
+        if new_price!='':
+            onepiece_price = int(new_price)
+        if newtime1!='':
+            onepiecesun1=newtime1
+        if newtime2!='':
+            onepiecesun2=newtime2
+        if newtime3!='':
+            onepiecesun3=newtime3
+
     if moviename =='Fight Club':
-        fightclub_price = new_price
+        if new_price!='':
+            fightclub_price = int(new_price)
+        if newtime1!='':
+            fightclubsun1=newtime1
+        if newtime2!='':
+            fightclubsun2=newtime2
+        if newtime3!='':
+            fightclubsun3=newtime3
+
     if moviename =='The Dark Knight':
-        batman_price = new_price
+        if new_price!='':
+            batman_price = int(new_price)
+        if newtime1!='':
+            batmansun1=newtime1
+        if newtime2!='':
+            batmansun2=newtime2
+        if newtime3!='':
+            batmansun3=newtime3
+
     if moviename =='Django Unchained':
-        django_price = new_price
+        if new_price!='':
+            django_price = int(new_price)
+        if newtime1!='':
+            djangosun1=newtime1
+        if newtime2!='':
+            djangosun2=newtime2
+        if newtime3!='':
+            djangosun3=newtime3
+
     if moviename =='Shark Tale':
-        sharktale_price = new_price
+        if new_price!='':
+            sharktale_price = int(new_price)
+        if newtime1!='':
+            sharktalesun1=newtime1
+        if newtime2!='':
+            sharktalesun2=newtime2
+        if newtime3!='':
+            sharktalesun3=newtime3
+
     change_to_Admin()
 
 #function to change to the color of Showing time 1 when clicked
@@ -503,6 +683,7 @@ def change_to_Main():
     Upcoming_frame.forget()
     Checkout_frame.forget()
     Description_Frame.forget()
+    Checkout_frame.forget()
     Main_frame.pack(fill='both', expand=1)
 
 
@@ -548,9 +729,15 @@ def change_to_Showtime():
     global image23
     global img23
     global moviefilename
+    global movie_time1,movie_time2,movie_time3
+    global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
     image23 = Image.open(moviefilename)
     image23 = image23.resize((200,250), Image.ANTIALIAS)
     img23 = ImageTk.PhotoImage(image23)
+    if moviefilename=='djangopic.jpg':
+        movie_time1 =djangosun1
+        movie_time2 = djangosun2
+        movie_time3 =djangosun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -650,6 +837,8 @@ def diehard_description():
     global image22
     global img22
     global diehard_price
+    global movie_time1, movie_time2, movie_time3
+    global diehardsun1,diehardsun2,diehardsun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -661,6 +850,9 @@ def diehard_description():
     movierating= 'Rating: R'
     moviecost ='Cost= $'+str(diehard_price)
     moviefilename = 'diehardpic.jpg'
+    movie_time1=diehardsun1
+    movie_time2=diehardsun2
+    movie_time3=diehardsun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -675,10 +867,12 @@ def diehard_description():
 def rushour_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
+    global rushhoursun1,rushhoursun2,rushhoursun3
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
     global Rushhour_price
+    global movie_time1, movie_time2, movie_time3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -690,6 +884,9 @@ def rushour_description():
     movierating= 'Rating: PG-13'
     moviecost ='Cost= $'+str(Rushhour_price)
     moviefilename = 'rushhourpic.jpg'
+    movie_time1=rushhoursun1
+    movie_time2=rushhoursun2
+    movie_time3=rushhoursun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -704,10 +901,12 @@ def rushour_description():
 def elf_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
+    global elfsun1,elfsun2,elfsun3
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
     global elf_price
+    global movie_time1, movie_time2, movie_time3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -719,6 +918,9 @@ def elf_description():
     movierating= 'Rating: PG'
     moviecost ='Cost= $'+str(elf_price)
     moviefilename = 'elfpic.jpg'
+    movie_time1=elfsun1
+    movie_time2=elfsun2
+    movie_time3=elfsun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -733,10 +935,12 @@ def elf_description():
 def matrix_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
+    global matrixsun1,matrixsun2,matrixsun3
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
     global matrix_price
+    global movie_time1, movie_time2, movie_time3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -748,6 +952,9 @@ def matrix_description():
     movierating= 'Rating: R'
     moviecost ='Cost= $'+str(matrix_price)
     moviefilename = 'matrixpic.jpg'
+    movie_time1=matrixsun1
+    movie_time2=matrixsun2
+    movie_time3=matrixsun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -766,6 +973,8 @@ def onepiece_description():
     global image22
     global img22
     global onepiece_price
+    global movie_time1, movie_time2, movie_time3
+    global onepiecesun1,onepiecesun2,onepiecesun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -777,6 +986,9 @@ def onepiece_description():
     movierating= 'Rating: PG-13'
     moviecost ='Cost= $'+str(onepiece_price)
     moviefilename = 'onepiecepic.jpg'
+    movie_time1=onepiecesun1
+    movie_time2=onepiecesun2
+    movie_time3=onepiecesun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -795,6 +1007,8 @@ def fightclub_description():
     global image22
     global img22
     global fightclub_price
+    global movie_time1, movie_time2, movie_time3
+    global fightclubsun1,fightclubsun2,fightclubsun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -806,6 +1020,9 @@ def fightclub_description():
     movierating= 'Rating: R'
     moviecost ='Cost= $'+str(fightclub_price)
     moviefilename = 'fightclubpic.jpg'
+    movie_time1=fightclubsun1
+    movie_time2=fightclubsun2
+    movie_time3=fightclubsun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -824,6 +1041,8 @@ def batman_description():
     global image22
     global img22
     global batman_price
+    global movie_time1, movie_time2, movie_time3
+    global batmansun1,batmansun2,batmansun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -835,6 +1054,9 @@ def batman_description():
     movierating= 'Rating: PG-13'
     moviecost ='Cost= $'+str(batman_price)
     moviefilename = 'darkknightpic.jpg'
+    movie_time1=batmansun1
+    movie_time2=batmansun2
+    movie_time3=batmansun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -850,6 +1072,8 @@ def django_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
+    global movie_time1, movie_time2, movie_time3
     global image22
     global img22
     global django_price
@@ -864,6 +1088,10 @@ def django_description():
     movierating= 'Rating: R'
     moviecost ='Cost= $'+str(django_price)
     moviefilename = 'djangopic.jpg'
+    movie_time1 = djangosun1
+    movie_time2 = djangosun2
+    movie_time3 = djangosun3
+
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -882,6 +1110,8 @@ def sharktale_description():
     global image22
     global img22
     global sharktale_price
+    global movie_time1, movie_time2, movie_time3
+    global sharktalesun1,sharktalesun2,sharktalesun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -893,6 +1123,9 @@ def sharktale_description():
     movierating= 'Rating: PG'
     moviecost ='Cost= $'+str(sharktale_price)
     moviefilename = 'sharktale.jpg'
+    movie_time1=sharktalesun1
+    movie_time2=sharktalesun2
+    movie_time3=sharktalesun3
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -1435,6 +1668,7 @@ def showtimeframe():
     global btn_Showing1,btn_Showing2,btn_Showing3,btn_Showing4,btn_Showing5,btn_Showing6,btn_Showing7,btn_Showing8,btn_Showing9,btn_Showing10,btn_Showing11,btn_Showing12,btn_Showing13,btn_Showing14,btn_Showing15,btn_Showing16,btn_Showing17,btn_Showing18,btn_Showing19,btn_Showing20,btn_Showing21
     global color1,color2,color3,color4,color5,color6,color7,color8,color9,color10,color11,color12,color13,color14,color15,color16,color17,color18,color19,color20,color21
     global spin_box1,spin_box2,spin_box3,spin_box4,spin_box5,spin_box6,spin_box7
+    global movie_time1, movie_time2, movie_time3
 
 
     # Location of the image
@@ -1448,11 +1682,11 @@ def showtimeframe():
     # Sunday title and spinbox
     lbl_sunday_Showtime = tkinter.Label(Showtime_frame,text='Sunday',font=font_small)
     lbl_sunday_Showtime.place(x=20, y=60)
-    btn_Showing1 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing1_Color)
+    btn_Showing1 = tkinter.Button(Showtime_frame,text =movie_time1,  command=change_Showing1_Color)
     btn_Showing1.place(x=10, y=95)
-    btn_Showing2 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing2_Color)
+    btn_Showing2 = tkinter.Button(Showtime_frame,text =movie_time2,  command=change_Showing2_Color)
     btn_Showing2.place(x=90, y=95)
-    btn_Showing3 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing3_Color)
+    btn_Showing3 = tkinter.Button(Showtime_frame,text =movie_time3,  command=change_Showing3_Color)
     btn_Showing3.place(x=170, y=95)
     color1 = cycle(['green', 'black', 'green', btn_Showing1['fg']])
     color2 = cycle(['green', 'black', 'green', btn_Showing2['fg']])
@@ -1561,6 +1795,7 @@ def showtimeframe():
 #-------------------------Checkout Frame---------------------------------------------
 def checkout():
     global TotalCost
+    global ent5,ent6,ent7,ent8,ent9,ent10,ent11,ent12
     #making buttons 
     btn_change_to_confirm = tkinter.Button(Checkout_frame,font = font_small,text ="Confirm",command = CheckoutConfirmed)
 
@@ -1618,7 +1853,7 @@ def checkout():
 
 #-------------------------Admin Frame---------------------------------------------
 def admin():
-    lbl_adminview_Admin = tkinter.Label(Admin_frame,text='Administration View', font=font_large)
+    lbl_adminview_Admin = tkinter.Label(Admin_frame,text='Administration Only', font=font_large)
 
     btn_kowalski_Admin = tkinter.Button(Admin_frame,font = font_small,text ="Status Report", command = StatusReport)
     btn_manageshow_Admin = tkinter.Button(Admin_frame,text='Manage Movies',font=font_small,command=change_to_ManageShows,height=2,width=15)
@@ -1666,7 +1901,8 @@ def manage_shows():
 
 #-------------------------edit Shows Frame---------------------------------------------
 def edit_show():
-    global ent15
+    global ent15,ent16,ent17,ent18
+    global timemovie1,timemovie2,timemovie3
     #making and placing back button
     btn_change_to_Manage_shows = tkinter.Button(edit_shows_frame,font = font_small,text ="Back",command = change_to_ManageShows)
     btn_change_to_Manage_shows.place(x=10,y=10)
@@ -1674,16 +1910,41 @@ def edit_show():
     lbl_heading_edit = tkinter.Label(edit_shows_frame,text=moviename,font=font_large)
     lbl_cost_edit = tkinter.Label(edit_shows_frame,text= moviecost2,font=font_small)
     lbl_cost2_edit = tkinter.Label(edit_shows_frame,text='To change the cost type in the box the new amount',font=font_small)
+    lbl_time_edit = tkinter.Label(edit_shows_frame,text='Showtimes:')
+    lbl_time_edit2 = tkinter.Label(edit_shows_frame,text='Type in the new time for any showtime or type N/A to remove the time')
+    lbl_time_edit3 = tkinter.Label(edit_shows_frame,text='Sunday')
+    lbl_time_edit4 = tkinter.Label(edit_shows_frame,text=timemovie1)
+    lbl_time_edit5 = tkinter.Label(edit_shows_frame,text=timemovie2)
+    lbl_time_edit6 = tkinter.Label(edit_shows_frame,text=timemovie3)
+    
     #placing labels into the edit movies frame
     lbl_heading_edit.pack(pady=20)
-    lbl_cost_edit.place(x=30,y=100)
-    lbl_cost2_edit.place(x=30,y=130)
+    lbl_cost_edit.place(x=30,y=70)
+    lbl_cost2_edit.place(x=30,y=100)
+    lbl_time_edit.place(x=30,y=150)
+    lbl_time_edit2.place(x=30,y=170)
+    lbl_time_edit3.place(x=30,y=190)
+    lbl_time_edit4.place(x=30,y=210)
+    lbl_time_edit5.place(x=160,y=210)
+    lbl_time_edit6.place(x=290,y=210)
     #making entry box
     ent15 = Entry(edit_shows_frame)
-    ent15.place(x=30,y=160)
+    ent15.place(x=30,y=130)
+    ent16= Entry(edit_shows_frame,width=10)
+    ent16.place(x=80,y=210)
+    ent17 = Entry(edit_shows_frame,width=10)
+    ent17.place(x=210,y=210)
+    ent18 = Entry(edit_shows_frame,width=10)
+    ent18.place(x=340,y=210)
     #making an apply button
     btn_apply_changes = tkinter.Button(edit_shows_frame,font=font_small,text='Apply',height=2,width=40,command=apply_edit)
     btn_apply_changes.place(x=40,y=530)
+
+
+
+
+
+
 #running the program starting at the Login Frame
 Login_frame.pack(fill='both', expand=1)
 
