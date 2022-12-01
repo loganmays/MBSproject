@@ -290,10 +290,17 @@ def diehard_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Die Hard'
-    moviecost2 ='Cost= $'+str(diehard_price)
-    timemovie1 = diehardsun1
-    timemovie2 = diehardsun2
-    timemovie3 = diehardsun3
+    file3 = open('diehardcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost2 ='Cost= $'+str(line)
+
+    file2 = open('diehardtime.txt', 'r')
+    Lines2 = file2.readlines()
+    timemovie1=Lines2[0].strip('\n')
+    timemovie2=Lines2[1].strip('\n')
+    timemovie3=Lines2[2].strip('\n')
 
     edit_show()
 
@@ -481,9 +488,13 @@ def apply_edit():
     newtime1 = str(ent16.get())
     newtime2 =str(ent17.get())
     newtime3 =str(ent18.get())
+
+
+
     if moviename =='Die Hard':
+        filestream2 = open('diehardcost.txt', 'w')
         if new_price!='':
-            diehard_price = int(new_price)
+            filestream2.write(new_price)
         if newtime1!='':
             diehardsun1=newtime1
         if newtime2!='':
@@ -901,6 +912,8 @@ def diehard_description():
     movie_time19=Lines2[18].strip('\n')
     movie_time20=Lines2[19].strip('\n')
     movie_time21=Lines2[20].strip('\n')
+    file2.close()
+    file3.close()
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -2023,7 +2036,6 @@ def showtimeframe():
 
     #placing buttons
     btn_change_to_checkout.place(x=275,y=480)
-
 #-------------------------Checkout Frame---------------------------------------------
 def checkout():
     global TotalCost
@@ -2135,6 +2147,7 @@ def manage_shows():
 def edit_show():
     global ent15,ent16,ent17,ent18
     global timemovie1,timemovie2,timemovie3
+    global moviecost2
     #making and placing back button
     btn_change_to_Manage_shows = tkinter.Button(edit_shows_frame,font = font_small,text ="Back",command = change_to_ManageShows)
     btn_change_to_Manage_shows.place(x=10,y=10)
