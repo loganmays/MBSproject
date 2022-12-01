@@ -17,7 +17,6 @@ global image22
 global img22
 global image23
 global img23
-global diehard_price,Rushhour_price,elf_price,matrix_price,onepiece_price,fightclub_price,batman_price,django_price,sharktale_price
 global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
 global diehardsun1,diehardsun2,diehardsun3
 global rushhoursun1,rushhoursun2,rushhoursun3
@@ -861,7 +860,6 @@ def diehard_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global diehard_price
     global movie_time1, movie_time2, movie_time3
     global diehardsun1,diehardsun2,diehardsun3
     Login_frame.forget()
@@ -873,7 +871,11 @@ def diehard_description():
     movieruntime='Runtime: 2h 12m'
     movie_description = 'Description: A New York City police officer tries to save his estranged wife\n and several others taken hostage by terrorists during a Christmas party at the \nNakatomi Plaza in Los Angeles.'
     movierating= 'Rating: R'
-    moviecost ='Cost= $'+str(diehard_price)
+    file3 = open('diehardcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'diehardpic.jpg'
     movie_time1=diehardsun1
     movie_time2=diehardsun2
