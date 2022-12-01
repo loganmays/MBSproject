@@ -302,6 +302,24 @@ def diehard_edit():
     movie_time1=Lines2[0].strip('\n')
     movie_time2=Lines2[1].strip('\n')
     movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -321,10 +339,29 @@ def rushhour_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Rush Hour'
     moviecost2 ='Cost= $'+str(Rushhour_price)
-    timemovie1 = rushhoursun1
-    timemovie2 = rushhoursun2
-    timemovie3 = rushhoursun3
-
+    file2 = open('rushhourtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     edit_show()
 
 #function to change the editing page to have Elf info
@@ -343,9 +380,29 @@ def elf_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Elf'
     moviecost2 ='Cost= $'+str(elf_price)
-    timemovie1 = elfsun1
-    timemovie2 = elfsun2
-    timemovie3 = elfsun3
+    file2 = open('elftime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -365,9 +422,29 @@ def matrix_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Matrix'
     moviecost2 ='Cost= $'+str(matrix_price)
-    timemovie1 = matrixsun1
-    timemovie2 = matrixsun2
-    timemovie3 = matrixsun3
+    file2 = open('matrixtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -387,9 +464,29 @@ def onepiece_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='One Piece'
     moviecost2 ='Cost= $'+str(onepiece_price)
-    timemovie1 = onepiecesun1
-    timemovie2 = onepiecesun2
-    timemovie3 = onepiecesun3
+    file2 = open('onepiecetime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -409,9 +506,29 @@ def fightclub_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Fight Club'
     moviecost2 ='Cost= $'+str(fightclub_price)
-    timemovie1 = fightclubsun1
-    timemovie2 = fightclubsun2
-    timemovie3 = fightclubsun3
+    file2 = open('fightclubtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -431,9 +548,29 @@ def batman_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Dark Knight'
     moviecost2 ='Cost= $'+str(batman_price)
-    timemovie1 = batmansun1
-    timemovie2 = batmansun2
-    timemovie3 = batmansun3
+    file2 = open('batmantime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -453,9 +590,29 @@ def django_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Django Unchained'
     moviecost2 ='Cost= $'+str(django_price)
-    timemovie1 = djangosun1
-    timemovie2 = djangosun2
-    timemovie3 = djangosun3
+    file2 = open('djangotime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     edit_show()
 
 #function to change the editing page to have Shark Tale info
@@ -474,9 +631,29 @@ def SharkTale_edit():
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Shark Tale'
     moviecost2 ='Cost= $'+str(sharktale_price)
-    timemovie1 = sharktalesun1
-    timemovie2 = sharktalesun2
-    timemovie3 = sharktalesun3
+    file2 = open('sharktaletime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     edit_show()
 
@@ -2155,8 +2332,7 @@ def manage_shows():
 
 #-------------------------edit Shows Frame---------------------------------------------
 def edit_show():
-    global ent15,ent16,ent17,ent18
-    global timemovie1,timemovie2,timemovie3
+    global ent15,ent16,ent17,ent18,ent19,ent20,ent21,ent22,ent23,ent24,ent25,ent26,ent27,ent28,ent29,ent30,ent31,ent32,ent33,ent34,ent35,ent36
     global moviecost2
     #making and placing back button
     btn_change_to_Manage_shows = tkinter.Button(edit_shows_frame,font = font_small,text ="Back",command = change_to_ManageShows)
@@ -2171,6 +2347,30 @@ def edit_show():
     lbl_time_edit4 = tkinter.Label(edit_shows_frame,text=movie_time1)
     lbl_time_edit5 = tkinter.Label(edit_shows_frame,text=movie_time2)
     lbl_time_edit6 = tkinter.Label(edit_shows_frame,text=movie_time3)
+    lbl_time_edit7 = tkinter.Label(edit_shows_frame,text='Monday')
+    lbl_time_edit8 = tkinter.Label(edit_shows_frame,text=movie_time4)
+    lbl_time_edit9 = tkinter.Label(edit_shows_frame,text=movie_time5)
+    lbl_time_edit10 = tkinter.Label(edit_shows_frame,text=movie_time6)
+    lbl_time_edit11 = tkinter.Label(edit_shows_frame,text='Tuesday')
+    lbl_time_edit12 = tkinter.Label(edit_shows_frame,text=movie_time7)
+    lbl_time_edit13 = tkinter.Label(edit_shows_frame,text=movie_time8)
+    lbl_time_edit14 = tkinter.Label(edit_shows_frame,text=movie_time9)
+    lbl_time_edit15 = tkinter.Label(edit_shows_frame,text='Wednesday')
+    lbl_time_edit16 = tkinter.Label(edit_shows_frame,text=movie_time10)
+    lbl_time_edit17 = tkinter.Label(edit_shows_frame,text=movie_time11)
+    lbl_time_edit18 = tkinter.Label(edit_shows_frame,text=movie_time12)
+    lbl_time_edit19 = tkinter.Label(edit_shows_frame,text='Thursday')
+    lbl_time_edit20 = tkinter.Label(edit_shows_frame,text=movie_time13)
+    lbl_time_edit21 = tkinter.Label(edit_shows_frame,text=movie_time14)
+    lbl_time_edit22 = tkinter.Label(edit_shows_frame,text=movie_time15)
+    lbl_time_edit23 = tkinter.Label(edit_shows_frame,text='Friday')
+    lbl_time_edit24 = tkinter.Label(edit_shows_frame,text=movie_time16)
+    lbl_time_edit25 = tkinter.Label(edit_shows_frame,text=movie_time17)
+    lbl_time_edit26 = tkinter.Label(edit_shows_frame,text=movie_time18)
+    lbl_time_edit27 = tkinter.Label(edit_shows_frame,text='Saturday')
+    lbl_time_edit28 = tkinter.Label(edit_shows_frame,text=movie_time19)
+    lbl_time_edit29 = tkinter.Label(edit_shows_frame,text=movie_time20)
+    lbl_time_edit30 = tkinter.Label(edit_shows_frame,text=movie_time21)
     
     #placing labels into the edit movies frame
     lbl_heading_edit.pack(pady=20)
@@ -2182,6 +2382,36 @@ def edit_show():
     lbl_time_edit4.place(x=30,y=210)
     lbl_time_edit5.place(x=160,y=210)
     lbl_time_edit6.place(x=290,y=210)
+
+    lbl_time_edit7.place(x=30,y=230)
+    lbl_time_edit8.place(x=30,y=250)
+    lbl_time_edit9.place(x=160,y=250)
+    lbl_time_edit10.place(x=290,y=250)
+
+    lbl_time_edit11.place(x=30,y=270)
+    lbl_time_edit12.place(x=30,y=290)
+    lbl_time_edit13.place(x=160,y=290)
+    lbl_time_edit14.place(x=290,y=290)
+
+    lbl_time_edit15.place(x=30,y=310)
+    lbl_time_edit16.place(x=30,y=330)
+    lbl_time_edit17.place(x=160,y=330)
+    lbl_time_edit18.place(x=290,y=330)
+
+    lbl_time_edit19.place(x=30,y=350)
+    lbl_time_edit20.place(x=30,y=370)
+    lbl_time_edit21.place(x=160,y=370)
+    lbl_time_edit22.place(x=290,y=370)
+
+    lbl_time_edit23.place(x=30,y=390)
+    lbl_time_edit24.place(x=30,y=410)
+    lbl_time_edit25.place(x=160,y=410)
+    lbl_time_edit26.place(x=290,y=410)
+
+    lbl_time_edit27.place(x=30,y=430)
+    lbl_time_edit28.place(x=30,y=450)
+    lbl_time_edit29.place(x=160,y=450)
+    lbl_time_edit30.place(x=290,y=450)
     #making entry box
     ent15 = Entry(edit_shows_frame)
     ent15.place(x=30,y=130)
@@ -2191,6 +2421,48 @@ def edit_show():
     ent17.place(x=210,y=210)
     ent18 = Entry(edit_shows_frame,width=10)
     ent18.place(x=340,y=210)
+
+    ent19= Entry(edit_shows_frame,width=10)
+    ent19.place(x=80,y=250)
+    ent20 = Entry(edit_shows_frame,width=10)
+    ent20.place(x=210,y=250)
+    ent21 = Entry(edit_shows_frame,width=10)
+    ent21.place(x=340,y=250)
+
+    ent22= Entry(edit_shows_frame,width=10)
+    ent22.place(x=80,y=290)
+    ent23 = Entry(edit_shows_frame,width=10)
+    ent23.place(x=210,y=290)
+    ent24 = Entry(edit_shows_frame,width=10)
+    ent24.place(x=340,y=290)
+
+    ent25= Entry(edit_shows_frame,width=10)
+    ent25.place(x=80,y=330)
+    ent26 = Entry(edit_shows_frame,width=10)
+    ent26.place(x=210,y=330)
+    ent27 = Entry(edit_shows_frame,width=10)
+    ent27.place(x=340,y=330)
+
+    ent28= Entry(edit_shows_frame,width=10)
+    ent28.place(x=80,y=370)
+    ent29 = Entry(edit_shows_frame,width=10)
+    ent29.place(x=210,y=370)
+    ent30 = Entry(edit_shows_frame,width=10)
+    ent30.place(x=340,y=370)
+
+    ent31= Entry(edit_shows_frame,width=10)
+    ent31.place(x=80,y=410)
+    ent32 = Entry(edit_shows_frame,width=10)
+    ent32.place(x=210,y=410)
+    ent33 = Entry(edit_shows_frame,width=10)
+    ent33.place(x=340,y=410)
+
+    ent34= Entry(edit_shows_frame,width=10)
+    ent34.place(x=80,y=450)
+    ent35 = Entry(edit_shows_frame,width=10)
+    ent35.place(x=210,y=450)
+    ent36 = Entry(edit_shows_frame,width=10)
+    ent36.place(x=340,y=450)
     #making an apply button
     btn_apply_changes = tkinter.Button(edit_shows_frame,font=font_small,text='Apply',height=2,width=40,command=apply_edit)
     btn_apply_changes.place(x=40,y=530)
