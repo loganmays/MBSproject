@@ -118,9 +118,34 @@ def CheckoutConfirmed():
             if moviefilename =='sharktale.jpg':
                 file.write('Shark Tale\n' + (smmer)+'\n')
         file.close()
-        msg3 = 'Checkout Successful'
-        tkinter.messagebox.showinfo('Checkout',msg3)
+        tkinter.messagebox.showinfo('Checkout','Checkout Successful')
         change_to_Main()
+
+def paypalconfirm():
+    with open ('TicketsSold.txt', 'a') as file:
+            if moviefilename =='diehardpic.jpg':
+                file.write('Die Hard\n' + (smmer)+'\n')
+            if moviefilename =='djangopic.jpg':
+                file.write('Django\n' + (smmer)+'\n')
+            if moviefilename =='rushhourpic.jpg':
+                file.write('Rush Hour\n' + (smmer)+'\n')
+            if moviefilename =='elfpic.jpg':
+                file.write('Elf\n' + (smmer)+'\n')
+            if moviefilename =='matrixpic.jpg':
+                file.write('Matrix\n' + (smmer)+'\n')
+            if moviefilename =='onepiecepic.jpg':
+                file.write('One Piece\n' + (smmer)+'\n')
+            if moviefilename =='fightclubpic.jpg':
+                file.write('Fight Club\n' + (smmer)+'\n')
+            if moviefilename =='darkknightpic.jpg':
+                file.write('Dark Knight\n' + (smmer)+'\n')
+            if moviefilename =='sharktale.jpg':
+                file.write('Shark Tale\n' + (smmer)+'\n')
+    tkinter.messagebox.showinfo('Checkout','Checkout Successful')
+    file.close()
+    change_to_Main()
+
+
 
 #function to display message of status report
 def StatusReport():
@@ -1809,7 +1834,7 @@ def checkout():
     lbl_state_Checkout = tkinter.Label(Checkout_frame,text='State:')
     lbl_zipcode_Checkout = tkinter.Label(Checkout_frame,text='ZIP code:')
     lbl_orLine_Checkout = tkinter.Label(Checkout_frame, text='---------------------------or---------------------------')
-    btn_paypal_Checkout = tkinter.Button(Checkout_frame,font = font_small,text ="PayPal")
+    btn_paypal_Checkout = tkinter.Button(Checkout_frame,font = font_small,text ="PayPal",command= paypalconfirm)
     lbl_PriceofTickets_Checkout = tkinter.Label(Checkout_frame,text='Your Total is: $',font = font_small)
     lbl_PriceofTickets2_Checkout = tkinter.Label(Checkout_frame,text=TotalCost,font=font_small)
 
