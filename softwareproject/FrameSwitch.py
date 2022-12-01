@@ -898,7 +898,6 @@ def rushour_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global Rushhour_price
     global movie_time1, movie_time2, movie_time3
     Login_frame.forget()
     Main_frame.forget()
@@ -909,7 +908,11 @@ def rushour_description():
     movieruntime='Runtime: 1h 38m'
     movie_description = 'Description: A loyal and dedicated Hong Kong Inspector teams up with a \nreckless and loudmouthed L.A.P.D. detective to rescue the Chinese Consuls\n kidnapped daughter, while trying to arrest a dangerous crime lord along the \nway.'
     movierating= 'Rating: PG-13'
-    moviecost ='Cost= $'+str(Rushhour_price)
+    file3 = open('rushhourcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'rushhourpic.jpg'
     movie_time1=rushhoursun1
     movie_time2=rushhoursun2
@@ -929,7 +932,7 @@ def elf_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
     global elfsun1,elfsun2,elfsun3
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global image22
     global img22
     global elf_price
@@ -943,7 +946,11 @@ def elf_description():
     movieruntime='Runtime: 1h 37m'
     movie_description = 'Description: Raised as an oversized elf, Buddy travels from the North Pole to \nNew York City to meet his biological father, Walter Hobbs, who doesnt know he \nexists and is in desperate need of some Christmas spirit.'
     movierating= 'Rating: PG'
-    moviecost ='Cost= $'+str(elf_price)
+    file3 = open('elfcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'elfpic.jpg'
     movie_time1=elfsun1
     movie_time2=elfsun2
@@ -963,7 +970,7 @@ def matrix_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
     global matrixsun1,matrixsun2,matrixsun3
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global image22
     global img22
     global matrix_price
@@ -977,7 +984,11 @@ def matrix_description():
     movieruntime='Runtime: 2h 16m'
     movie_description = 'Description: When a beautiful stranger leads computer hacker Neo to a \nforbidding underworld, he discovers the shocking truth--the life he knows is \nthe elaborate deception of an evil cyber-intelligence.'
     movierating= 'Rating: R'
-    moviecost ='Cost= $'+str(matrix_price)
+    file3 = open('matrixcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'matrixpic.jpg'
     movie_time1=matrixsun1
     movie_time2=matrixsun2
@@ -996,7 +1007,7 @@ def matrix_description():
 def onepiece_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global image22
     global img22
     global onepiece_price
@@ -1011,7 +1022,11 @@ def onepiece_description():
     movieruntime='Runtime: 1h 55m'
     movie_description = 'Description: For the first time ever, Uta - the most beloved singer in the \nworld - will reveal herself to the world at a live concert. The voice that the \nwhole world has been waiting for is about to resound.'
     movierating= 'Rating: PG-13'
-    moviecost ='Cost= $'+str(onepiece_price)
+    file3 = open('onepiececost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'onepiecepic.jpg'
     movie_time1=onepiecesun1
     movie_time2=onepiecesun2
@@ -1030,7 +1045,7 @@ def onepiece_description():
 def fightclub_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global image22
     global img22
     global fightclub_price
@@ -1045,7 +1060,11 @@ def fightclub_description():
     movieruntime='Runtime: 2h 19m'
     movie_description = 'Description: An insomniac office worker and a devil-may-care soap maker form \nan underground fight club that evolves into much more.'
     movierating= 'Rating: R'
-    moviecost ='Cost= $'+str(fightclub_price)
+    file3 = open('fightclubcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'fightclubpic.jpg'
     movie_time1=fightclubsun1
     movie_time2=fightclubsun2
@@ -1064,7 +1083,7 @@ def fightclub_description():
 def batman_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global image22
     global img22
     global batman_price
@@ -1079,7 +1098,11 @@ def batman_description():
     movieruntime='Runtime: 2h 32m'
     movie_description = 'Description: When the menace known as the Joker wreaks havoc and chaos on the \npeople of Gotham, Batman must accept one of the greatest psychological and \nphysical tests of his ability to fight injustice.'
     movierating= 'Rating: PG-13'
-    moviecost ='Cost= $'+str(batman_price)
+    file3 = open('darkknightcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'darkknightpic.jpg'
     movie_time1=batmansun1
     movie_time2=batmansun2
@@ -1098,7 +1121,7 @@ def batman_description():
 def django_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
     global movie_time1, movie_time2, movie_time3
     global image22
@@ -1113,7 +1136,11 @@ def django_description():
     movieruntime='Runtime: 2h 45m'
     movie_description = 'Description: With the help of a German bounty-hunter, a freed slave sets out to\n rescue his wife from a brutal plantation-owner in Mississippi.'
     movierating= 'Rating: R'
-    moviecost ='Cost= $'+str(django_price)
+    file3 = open('djangocost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'djangopic.jpg'
     movie_time1 = djangosun1
     movie_time2 = djangosun2
@@ -1133,7 +1160,7 @@ def django_description():
 def sharktale_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviefilename
     global image22
     global img22
     global sharktale_price
@@ -1148,7 +1175,11 @@ def sharktale_description():
     movieruntime='Runtime: 1h 30m'
     movie_description = 'Description: When a son of a gangster shark boss is accidentally killed while \non the hunt, his would-be prey and his vegetarian brother decide to use the \nincident to their own advantage.'
     movierating= 'Rating: PG'
-    moviecost ='Cost= $'+str(sharktale_price)
+    file3 = open('sharktalecost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     moviefilename = 'sharktale.jpg'
     movie_time1=sharktalesun1
     movie_time2=sharktalesun2
@@ -1976,6 +2007,3 @@ def edit_show():
 Login_frame.pack(fill='both', expand=1)
 
 root.mainloop()
-
-
-
