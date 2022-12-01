@@ -860,7 +860,7 @@ def diehard_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7
     global diehardsun1,diehardsun2,diehardsun3
     Login_frame.forget()
     Main_frame.forget()
@@ -877,9 +877,12 @@ def diehard_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'diehardpic.jpg'
-    movie_time1=diehardsun1
-    movie_time2=diehardsun2
-    movie_time3=diehardsun3
+
+    file2 = open('diehardtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -932,10 +935,9 @@ def elf_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
     global elfsun1,elfsun2,elfsun3
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global elf_price
     global movie_time1, movie_time2, movie_time3
     Login_frame.forget()
     Main_frame.forget()
@@ -970,10 +972,9 @@ def matrix_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
     global matrixsun1,matrixsun2,matrixsun3
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global matrix_price
     global movie_time1, movie_time2, movie_time3
     Login_frame.forget()
     Main_frame.forget()
@@ -1007,10 +1008,9 @@ def matrix_description():
 def onepiece_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global onepiece_price
     global movie_time1, movie_time2, movie_time3
     global onepiecesun1,onepiecesun2,onepiecesun3
     Login_frame.forget()
@@ -1045,10 +1045,9 @@ def onepiece_description():
 def fightclub_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global fightclub_price
     global movie_time1, movie_time2, movie_time3
     global fightclubsun1,fightclubsun2,fightclubsun3
     Login_frame.forget()
@@ -1083,10 +1082,9 @@ def fightclub_description():
 def batman_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global batman_price
     global movie_time1, movie_time2, movie_time3
     global batmansun1,batmansun2,batmansun3
     Login_frame.forget()
@@ -1121,12 +1119,11 @@ def batman_description():
 def django_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
     global movie_time1, movie_time2, movie_time3
     global image22
     global img22
-    global django_price
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -1160,10 +1157,9 @@ def django_description():
 def sharktale_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global heading_description,movieruntime,movie_description,movierating,moviefilename
+    global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global sharktale_price
     global movie_time1, movie_time2, movie_time3
     global sharktalesun1,sharktalesun2,sharktalesun3
     Login_frame.forget()
@@ -2007,3 +2003,6 @@ def edit_show():
 Login_frame.pack(fill='both', expand=1)
 
 root.mainloop()
+
+
+
