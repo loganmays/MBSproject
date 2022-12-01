@@ -280,6 +280,7 @@ def SumTicketsSold():
 def diehard_edit():
     global moviename
     global moviecost2
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -298,9 +299,9 @@ def diehard_edit():
 
     file2 = open('diehardtime.txt', 'r')
     Lines2 = file2.readlines()
-    timemovie1=Lines2[0].strip('\n')
-    timemovie2=Lines2[1].strip('\n')
-    timemovie3=Lines2[2].strip('\n')
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
 
     edit_show()
 
@@ -308,6 +309,7 @@ def diehard_edit():
 def rushhour_edit():
     global moviename
     global moviecost2
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -329,6 +331,7 @@ def rushhour_edit():
 def elf_edit():
     global moviename
     global moviecost2
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -350,6 +353,7 @@ def elf_edit():
 def matrix_edit():
     global moviename
     global moviecost2
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -372,6 +376,7 @@ def onepiece_edit():
     global moviename
     global moviecost2
     global timemovie1,timemovie2,timemovie3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -392,6 +397,7 @@ def onepiece_edit():
 def fightclub_edit():
     global moviename
     global moviecost2
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -414,6 +420,7 @@ def batman_edit():
     global moviename
     global moviecost2
     global timemovie1,timemovie2,timemovie3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -435,6 +442,7 @@ def django_edit():
     global moviename
     global moviecost2
     global timemovie1,timemovie2,timemovie3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -455,6 +463,7 @@ def SharkTale_edit():
     global moviename
     global moviecost2
     global timemovie1,timemovie2,timemovie3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -478,6 +487,7 @@ def apply_edit():
     global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
     global diehardsun1,diehardsun2,diehardsun3
     global rushhoursun1,rushhoursun2,rushhoursun3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global elfsun1,elfsun2,elfsun3
     global matrixsun1,matrixsun2,matrixsun3
     global onepiecesun1,onepiecesun2,onepiecesun3
@@ -2158,9 +2168,9 @@ def edit_show():
     lbl_time_edit = tkinter.Label(edit_shows_frame,text='Showtimes:')
     lbl_time_edit2 = tkinter.Label(edit_shows_frame,text='Type in the new time for any showtime or type N/A to remove the time')
     lbl_time_edit3 = tkinter.Label(edit_shows_frame,text='Sunday')
-    lbl_time_edit4 = tkinter.Label(edit_shows_frame,text=timemovie1)
-    lbl_time_edit5 = tkinter.Label(edit_shows_frame,text=timemovie2)
-    lbl_time_edit6 = tkinter.Label(edit_shows_frame,text=timemovie3)
+    lbl_time_edit4 = tkinter.Label(edit_shows_frame,text=movie_time1)
+    lbl_time_edit5 = tkinter.Label(edit_shows_frame,text=movie_time2)
+    lbl_time_edit6 = tkinter.Label(edit_shows_frame,text=movie_time3)
     
     #placing labels into the edit movies frame
     lbl_heading_edit.pack(pady=20)
