@@ -860,7 +860,7 @@ def diehard_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global diehardsun1,diehardsun2,diehardsun3
     Login_frame.forget()
     Main_frame.forget()
@@ -883,6 +883,24 @@ def diehard_description():
     movie_time1=Lines2[0].strip('\n')
     movie_time2=Lines2[1].strip('\n')
     movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -901,7 +919,7 @@ def rushour_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -917,9 +935,29 @@ def rushour_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'rushhourpic.jpg'
-    movie_time1=rushhoursun1
-    movie_time2=rushhoursun2
-    movie_time3=rushhoursun3
+    file2 = open('rushhourtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -938,7 +976,7 @@ def elf_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -954,9 +992,29 @@ def elf_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'elfpic.jpg'
-    movie_time1=elfsun1
-    movie_time2=elfsun2
-    movie_time3=elfsun3
+    file2 = open('elftime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -975,7 +1033,7 @@ def matrix_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -991,9 +1049,29 @@ def matrix_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'matrixpic.jpg'
-    movie_time1=matrixsun1
-    movie_time2=matrixsun2
-    movie_time3=matrixsun3
+    file2 = open('matrixtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -1011,7 +1089,7 @@ def onepiece_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global onepiecesun1,onepiecesun2,onepiecesun3
     Login_frame.forget()
     Main_frame.forget()
@@ -1028,9 +1106,29 @@ def onepiece_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'onepiecepic.jpg'
-    movie_time1=onepiecesun1
-    movie_time2=onepiecesun2
-    movie_time3=onepiecesun3
+    file2 = open('onepiecetime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -1048,7 +1146,7 @@ def fightclub_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global fightclubsun1,fightclubsun2,fightclubsun3
     Login_frame.forget()
     Main_frame.forget()
@@ -1065,9 +1163,29 @@ def fightclub_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'fightclubpic.jpg'
-    movie_time1=fightclubsun1
-    movie_time2=fightclubsun2
-    movie_time3=fightclubsun3
+    file2 = open('fightclubtime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -1085,7 +1203,7 @@ def batman_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global batmansun1,batmansun2,batmansun3
     Login_frame.forget()
     Main_frame.forget()
@@ -1102,9 +1220,29 @@ def batman_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'darkknightpic.jpg'
-    movie_time1=batmansun1
-    movie_time2=batmansun2
-    movie_time3=batmansun3
+    file2 = open('batmantime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -1121,7 +1259,7 @@ def django_description():
         widget.destroy()
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global image22
     global img22
     Login_frame.forget()
@@ -1139,9 +1277,29 @@ def django_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'djangopic.jpg'
-    movie_time1 = djangosun1
-    movie_time2 = djangosun2
-    movie_time3 = djangosun3
+    file2 = open('djangotime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
 
     #images for frame
     image22= Image.open(moviefilename)
@@ -1160,7 +1318,7 @@ def sharktale_description():
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
-    global movie_time1, movie_time2, movie_time3
+    global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global sharktalesun1,sharktalesun2,sharktalesun3
     Login_frame.forget()
     Main_frame.forget()
@@ -1177,9 +1335,29 @@ def sharktale_description():
         line = line.strip('\n')
         moviecost ='Cost= $'+str(line)
     moviefilename = 'sharktale.jpg'
-    movie_time1=sharktalesun1
-    movie_time2=sharktalesun2
-    movie_time3=sharktalesun3
+    file2 = open('sharktaletime.txt', 'r')
+    Lines2 = file2.readlines()
+    movie_time1=Lines2[0].strip('\n')
+    movie_time2=Lines2[1].strip('\n')
+    movie_time3=Lines2[2].strip('\n')
+    movie_time4=Lines2[3].strip('\n')
+    movie_time5=Lines2[4].strip('\n')
+    movie_time6=Lines2[5].strip('\n')
+    movie_time7=Lines2[6].strip('\n')
+    movie_time8=Lines2[7].strip('\n')
+    movie_time9=Lines2[8].strip('\n')
+    movie_time10=Lines2[9].strip('\n')
+    movie_time11=Lines2[10].strip('\n')
+    movie_time12=Lines2[11].strip('\n')
+    movie_time13=Lines2[12].strip('\n')
+    movie_time14=Lines2[13].strip('\n')
+    movie_time15=Lines2[14].strip('\n')
+    movie_time16=Lines2[15].strip('\n')
+    movie_time17=Lines2[16].strip('\n')
+    movie_time18=Lines2[17].strip('\n')
+    movie_time19=Lines2[18].strip('\n')
+    movie_time20=Lines2[19].strip('\n')
+    movie_time21=Lines2[20].strip('\n')
     #images for frame
     image22= Image.open(moviefilename)
 
@@ -1751,11 +1929,11 @@ def showtimeframe():
     # Monday title and spinbox
     lbl_monday_Showtime = tkinter.Label(Showtime_frame,text='Monday',font=font_small)
     lbl_monday_Showtime.place(x=20, y=135)
-    btn_Showing4 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing4_Color)
+    btn_Showing4 = tkinter.Button(Showtime_frame,text =movie_time4,  command=change_Showing4_Color)
     btn_Showing4.place(x=10, y=170)
-    btn_Showing5 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing5_Color)
+    btn_Showing5 = tkinter.Button(Showtime_frame,text =movie_time5,  command=change_Showing5_Color)
     btn_Showing5.place(x=90, y=170)
-    btn_Showing6 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing6_Color)
+    btn_Showing6 = tkinter.Button(Showtime_frame,text =movie_time6,  command=change_Showing6_Color)
     btn_Showing6.place(x=170, y=170)
     color4 = cycle(['green', 'black', 'green', btn_Showing4['fg']])
     color5 = cycle(['green', 'black', 'green', btn_Showing5['fg']])
@@ -1766,11 +1944,11 @@ def showtimeframe():
     # Tuesday title and spinbox
     lbl_tuesday_Showtime = tkinter.Label(Showtime_frame,text='Tuesday',font=font_small)
     lbl_tuesday_Showtime.place(x=20, y=210)
-    btn_Showing7 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing7_Color)
+    btn_Showing7 = tkinter.Button(Showtime_frame,text =movie_time7,  command=change_Showing7_Color)
     btn_Showing7.place(x=10, y=245)
-    btn_Showing8 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing8_Color)
+    btn_Showing8 = tkinter.Button(Showtime_frame,text =movie_time8,  command=change_Showing8_Color)
     btn_Showing8.place(x=90, y=245)
-    btn_Showing9 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing9_Color)
+    btn_Showing9 = tkinter.Button(Showtime_frame,text =movie_time9,  command=change_Showing9_Color)
     btn_Showing9.place(x=170, y=245)
     color7 = cycle(['green', 'black', 'green', btn_Showing7['fg']])
     color8 = cycle(['green', 'black', 'green', btn_Showing8['fg']])
@@ -1781,11 +1959,11 @@ def showtimeframe():
     # Wednesday title and spinbox
     lbl_wednesday_Showtime = tkinter.Label(Showtime_frame,text='Wednesday',font=font_small)
     lbl_wednesday_Showtime.place(x=20, y=285)
-    btn_Showing10 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing10_Color)
+    btn_Showing10 = tkinter.Button(Showtime_frame,text =movie_time10,  command=change_Showing10_Color)
     btn_Showing10.place(x=10, y=320)
-    btn_Showing11 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing11_Color)
+    btn_Showing11 = tkinter.Button(Showtime_frame,text =movie_time11,  command=change_Showing11_Color)
     btn_Showing11.place(x=90, y=320)
-    btn_Showing12 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing12_Color)
+    btn_Showing12 = tkinter.Button(Showtime_frame,text =movie_time12,  command=change_Showing12_Color)
     btn_Showing12.place(x=170, y=320)
     color10 = cycle(['green', 'black', 'green', btn_Showing10['fg']])
     color11 = cycle(['green', 'black', 'green', btn_Showing11['fg']])
@@ -1796,11 +1974,11 @@ def showtimeframe():
     # Thursday title and spinbox
     lbl_thursday_Showtime = tkinter.Label(Showtime_frame,text='Thursday',font=font_small)
     lbl_thursday_Showtime.place(x=20, y=360)
-    btn_Showing13 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing13_Color)
+    btn_Showing13 = tkinter.Button(Showtime_frame,text =movie_time13,  command=change_Showing13_Color)
     btn_Showing13.place(x=10, y=395)
-    btn_Showing14 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing14_Color)
+    btn_Showing14 = tkinter.Button(Showtime_frame,text =movie_time14,  command=change_Showing14_Color)
     btn_Showing14.place(x=90, y=395)
-    btn_Showing15 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing15_Color)
+    btn_Showing15 = tkinter.Button(Showtime_frame,text =movie_time15,  command=change_Showing15_Color)
     btn_Showing15.place(x=170, y=395)
     color13 = cycle(['green', 'black', 'green', btn_Showing13['fg']])
     color14 = cycle(['green', 'black', 'green', btn_Showing14['fg']])
@@ -1811,11 +1989,11 @@ def showtimeframe():
     # Friday title and spinbox
     lbl_friday_Showtime = tkinter.Label(Showtime_frame,text='Friday',font=font_small)
     lbl_friday_Showtime.place(x=20, y=435)
-    btn_Showing16 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing16_Color)
+    btn_Showing16 = tkinter.Button(Showtime_frame,text =movie_time16,  command=change_Showing16_Color)
     btn_Showing16.place(x=10, y=470)
-    btn_Showing17 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing17_Color)
+    btn_Showing17 = tkinter.Button(Showtime_frame,text =movie_time17,  command=change_Showing17_Color)
     btn_Showing17.place(x=90, y=470)
-    btn_Showing18 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing18_Color)
+    btn_Showing18 = tkinter.Button(Showtime_frame,text =movie_time18,  command=change_Showing18_Color)
     btn_Showing18.place(x=170, y=470)
     color16 = cycle(['green', 'black', 'green', btn_Showing16['fg']])
     color17 = cycle(['green', 'black', 'green', btn_Showing17['fg']])
@@ -1826,11 +2004,11 @@ def showtimeframe():
     # Saturday title and spinbox
     lbl_saturday_Showtime = tkinter.Label(Showtime_frame,text='Saturday',font=font_small)
     lbl_saturday_Showtime.place(x=20, y=510)
-    btn_Showing19 = tkinter.Button(Showtime_frame,text ="1:00 P.M.",  command=change_Showing19_Color)
+    btn_Showing19 = tkinter.Button(Showtime_frame,text =movie_time19,  command=change_Showing19_Color)
     btn_Showing19.place(x=10, y=545)
-    btn_Showing20 = tkinter.Button(Showtime_frame,text ="3:45 P.M.",  command=change_Showing20_Color)
+    btn_Showing20 = tkinter.Button(Showtime_frame,text =movie_time20,  command=change_Showing20_Color)
     btn_Showing20.place(x=90, y=545)
-    btn_Showing21 = tkinter.Button(Showtime_frame,text ="7:00 P.M.",  command=change_Showing21_Color)
+    btn_Showing21 = tkinter.Button(Showtime_frame,text =movie_time21,  command=change_Showing21_Color)
     btn_Showing21.place(x=170, y=545)
     color19 = cycle(['green', 'black', 'green', btn_Showing19['fg']])
     color20 = cycle(['green', 'black', 'green', btn_Showing20['fg']])
