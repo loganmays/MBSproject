@@ -279,9 +279,8 @@ def SumTicketsSold():
 #function to change the editing page to have die hard info
 def diehard_edit():
     global moviename
-    global moviecost2
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -295,7 +294,7 @@ def diehard_edit():
     Lines3 = file3.readlines()
     for line in Lines3:
         line = line.strip('\n')
-        moviecost2 ='Cost= $'+str(line)
+        moviecost ='Cost= $'+str(line)
 
     file2 = open('diehardtime.txt', 'r')
     Lines2 = file2.readlines()
@@ -320,15 +319,16 @@ def diehard_edit():
     movie_time19=Lines2[18].strip('\n')
     movie_time20=Lines2[19].strip('\n')
     movie_time21=Lines2[20].strip('\n')
+    file3.close()
+    file2.close()
 
     edit_show()
 
 #function to change the editing page to have Rush hour info
 def rushhour_edit():
     global moviename
-    global moviecost2
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -338,7 +338,7 @@ def rushhour_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Rush Hour'
-    moviecost2 ='Cost= $'+str(Rushhour_price)
+    moviecost ='Cost= $'+str(Rushhour_price)
     file2 = open('rushhourtime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -362,14 +362,15 @@ def rushhour_edit():
     movie_time19=Lines2[18].strip('\n')
     movie_time20=Lines2[19].strip('\n')
     movie_time21=Lines2[20].strip('\n')
+
+
     edit_show()
 
 #function to change the editing page to have Elf info
 def elf_edit():
     global moviename
-    global moviecost2
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -379,7 +380,7 @@ def elf_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Elf'
-    moviecost2 ='Cost= $'+str(elf_price)
+    moviecost ='Cost= $'+str(elf_price)
     file2 = open('elftime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -409,7 +410,7 @@ def elf_edit():
 #function to change the editing page to have Matrix info
 def matrix_edit():
     global moviename
-    global moviecost2
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
@@ -421,7 +422,7 @@ def matrix_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Matrix'
-    moviecost2 ='Cost= $'+str(matrix_price)
+    moviecost ='Cost= $'+str(matrix_price)
     file2 = open('matrixtime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -451,8 +452,7 @@ def matrix_edit():
 #function to change the editing page to have One Piece info
 def onepiece_edit():
     global moviename
-    global moviecost2
-    global timemovie1,timemovie2,timemovie3
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -463,7 +463,7 @@ def onepiece_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='One Piece'
-    moviecost2 ='Cost= $'+str(onepiece_price)
+    moviecost ='Cost= $'+str(onepiece_price)
     file2 = open('onepiecetime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -493,7 +493,7 @@ def onepiece_edit():
 #function to change the editing page to have Fight Club info
 def fightclub_edit():
     global moviename
-    global moviecost2
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
@@ -505,7 +505,7 @@ def fightclub_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Fight Club'
-    moviecost2 ='Cost= $'+str(fightclub_price)
+    moviecost ='Cost= $'+str(fightclub_price)
     file2 = open('fightclubtime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -535,7 +535,7 @@ def fightclub_edit():
 #function to change the editing page to have Batman info
 def batman_edit():
     global moviename
-    global moviecost2
+    global moviecost
     global timemovie1,timemovie2,timemovie3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
@@ -547,7 +547,7 @@ def batman_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Dark Knight'
-    moviecost2 ='Cost= $'+str(batman_price)
+    moviecost ='Cost= $'+str(batman_price)
     file2 = open('batmantime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -578,7 +578,6 @@ def batman_edit():
 def django_edit():
     global moviename
     global moviecost2
-    global timemovie1,timemovie2,timemovie3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -613,13 +612,13 @@ def django_edit():
     movie_time19=Lines2[18].strip('\n')
     movie_time20=Lines2[19].strip('\n')
     movie_time21=Lines2[20].strip('\n')
+    
     edit_show()
 
 #function to change the editing page to have Shark Tale info
 def SharkTale_edit():
     global moviename
-    global moviecost2
-    global timemovie1,timemovie2,timemovie3
+    global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -630,7 +629,7 @@ def SharkTale_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Shark Tale'
-    moviecost2 ='Cost= $'+str(sharktale_price)
+    moviecost ='Cost= $'+str(sharktale_price)
     file2 = open('sharktaletime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -659,115 +658,1057 @@ def SharkTale_edit():
 
 #Function to apply the changes the admin made
 def apply_edit():
-    global ent15
-    global diehard_price,matrix_price,Rushhour_price,elf_price,onepiece_price,fightclub_price,batman_price,django_price,sharktale_price
-    global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
-    global diehardsun1,diehardsun2,diehardsun3
-    global rushhoursun1,rushhoursun2,rushhoursun3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global elfsun1,elfsun2,elfsun3
-    global matrixsun1,matrixsun2,matrixsun3
-    global onepiecesun1,onepiecesun2,onepiecesun3
-    global fightclubsun1,fightclubsun2,fightclubsun3
-    global batmansun1,batmansun2,batmansun3
-    global sharktalesun1,sharktalesun2,sharktalesun3
     new_price = str(ent15.get())
     newtime1 = str(ent16.get())
     newtime2 =str(ent17.get())
     newtime3 =str(ent18.get())
+    newtime4 =str(ent19.get())
+    newtime5 =str(ent20.get())
+    newtime6 =str(ent21.get())
+    newtime7 =str(ent22.get())
+    newtime8 =str(ent23.get())
+    newtime9 = str(ent24.get())
+    newtime10 =str(ent25.get())
+    newtime11 =str(ent26.get())
+    newtime12 =str(ent27.get())
+    newtime13 =str(ent28.get())
+    newtime14 =str(ent29.get())
+    newtime15 =str(ent30.get())
+    newtime16 =str(ent31.get())
+    newtime17 = str(ent32.get())
+    newtime18 =str(ent33.get())
+    newtime19 =str(ent34.get())
+    newtime20 =str(ent35.get())
+    newtime21 =str(ent36.get())
 
 
 
     if moviename =='Die Hard':
-        filestream2 = open('diehardcost.txt', 'w')
+        filestream3 =open('diehardtime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
+            filestream2 = open('diehardcost.txt', 'w')
             filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            diehardsun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('diehardtime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            diehardsun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('diehardtime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            diehardsun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('diehardtime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('diehardtime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('diehardtime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('diehardtime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('diehardtime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('diehardtime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('diehardtime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('diehardtime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('diehardtime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('diehardtime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('diehardtime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('diehardtime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('diehardtime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('diehardtime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('diehardtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('diehardtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('diehardtime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('diehardtime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('diehardtime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='Rush Hour':
+        filestream3 =open('rushhourtime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            Rushhour_price = int(new_price)
+            filestream2 = open('rushhourcost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            rushhoursun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('rushhourtime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            rushhoursun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('rushhourtime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            rushhoursun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('rushhourtime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('rushhourtime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('rushhourtime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('rushhourtime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('rushhourtime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('rushhourtime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('rushhourtime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('rushhourtime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('rushhourtime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('rushhourtime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('rushhourtime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('rushhourtime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('rushhourtime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('rushhourtime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('rushhourtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('rushhourtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('rushhourtime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('rushhourtime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('rushhourtime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='Elf':
+        filestream3 =open('elftime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            elf_price = int(new_price)
+            filestream2 = open('elfcost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            elfsun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('elftime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            elfsun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('elftime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            elfsun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('elftime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('elftime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('elftime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('elftime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('elftime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('elftime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('elftime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('elftime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('elftime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('elftime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('elftime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('elftime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('elftime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('elftime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('elftime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('elftime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('elftime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('elftime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('elftime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='The Matrix':
+        filestream3 =open('matrixtime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            matrix_price = int(new_price)
+            filestream2 = open('matrixcost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            matrixsun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('matrixtime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            matrixsun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('matrixtime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            matrixsun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('matrixtime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('matrixtime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('matrixtime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('matrixtime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('matrixtime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('matrixtime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('matrixtime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('matrixtime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('matrixtime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('matrixtime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('matrixtime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('matrixtime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('matrixtime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('matrixtime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('matrixtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('matrixtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('matrixtime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('matrixtime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('matrixtime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='One Piece':
+        filestream3 =open('onepiecetime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            onepiece_price = int(new_price)
+            filestream2 = open('onepiececost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            onepiecesun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('onepiecetime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            onepiecesun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('onepiecetime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            onepiecesun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('onepiecetime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('onepiecetime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('onepiecetime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('onepiecetime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('onepiecetime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('onepiecetime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('onepiecetime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('onepiecetime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('onepiecetime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('onepiecetime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('onepiecetime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('onepiecetime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('onepiecetime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('onepiecetime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('onepiecetime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('onepiecetime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('onepiecetime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('onepiecetime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('onepiecetime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='Fight Club':
+        filestream3 =open('fightclubtime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            fightclub_price = int(new_price)
+            filestream2 = open('fightclubcost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            fightclubsun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('fightclubtime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            fightclubsun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('fightclubtime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            fightclubsun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('fightclubtime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('fightclubtime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('fightclubtime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('fightclubtime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('fightclubtime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('fightclubtime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('fightclubtime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('fightclubtime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('fightclubtime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('fightclubtime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('fightclubtime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('fightclubtime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('fightclubtime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('fightclubtime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('fightclubtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('fightclubtime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('fightclubtime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('fightclubtime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('fightclubtime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='The Dark Knight':
+        filestream3 =open('batmantime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            batman_price = int(new_price)
+            filestream2 = open('darkknightcost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            batmansun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('batmantime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            batmansun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('batmantime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            batmansun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('batmantime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('batmantime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('batmantime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('batmantime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('batmantime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('batmantime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('batmantime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('batmantime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('batmantime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('batmantime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('batmantime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('batmantime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('batmantime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('batmantime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('batmantime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('batmantime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('batmantime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('batmantime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('batmantime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='Django Unchained':
+        filestream3 =open('djangotime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            django_price = int(new_price)
+            filestream2 = open('djangocost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            djangosun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('djangotime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            djangosun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('djangotime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            djangosun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('djangotime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('djangotime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('djangotime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('djangotime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('djangotime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('djangotime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('djangotime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('djangotime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('djangotime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('djangotime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('djangotime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('djangotime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('djangotime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('djangotime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('djangotime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('djangotime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('djangotime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('djangotime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('djangotime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     if moviename =='Shark Tale':
+        filestream3 =open('sharktaletime.txt','r')
+        data =filestream3.readlines()
+        filestream3.close()
         if new_price!='':
-            sharktale_price = int(new_price)
+            filestream2 = open('sharktalecost.txt', 'w')
+            filestream2.write(new_price)
+            filestream2.close()
         if newtime1!='':
-            sharktalesun1=newtime1
+            data[0]=newtime1 +'\n'
+            filestream4=open('sharktaletime.txt','w')
+            filestream4.writelines(data)
+            filestream4.close()
         if newtime2!='':
-            sharktalesun2=newtime2
+            data[1]=newtime2 +'\n'
+            filestream5=open('sharktaletime.txt','w')
+            filestream5.writelines(data)
+            filestream5.close()
         if newtime3!='':
-            sharktalesun3=newtime3
+            data[2]=newtime3 +'\n'
+            filestream6=open('sharktaletime.txt','w')
+            filestream6.writelines(data)
+            filestream6.close() 
+        if newtime4!='':
+            data[3]=newtime4 +'\n'
+            filestream7=open('sharktaletime.txt','w')
+            filestream7.writelines(data)
+            filestream7.close() 
+        if newtime5!='':
+            data[4]=newtime5 +'\n'
+            filestream8=open('sharktaletime.txt','w')
+            filestream8.writelines(data)
+            filestream8.close()
+        if newtime6!='':
+            data[5]=newtime6 +'\n'
+            filestream9=open('sharktaletime.txt','w')
+            filestream9.writelines(data)
+            filestream9.close()
+        if newtime7!='':
+            data[6]=newtime7 +'\n'
+            filestream10=open('sharktaletime.txt','w')
+            filestream10.writelines(data)
+            filestream10.close() 
+        if newtime8!='':
+            data[7]=newtime8 +'\n'
+            filestream11=open('sharktaletime.txt','w')
+            filestream11.writelines(data)
+            filestream11.close() 
+        if newtime9!='':
+            data[8]=newtime9 +'\n'
+            filestream12=open('sharktaletime.txt','w')
+            filestream12.writelines(data)
+            filestream12.close()
+        if newtime10!='':
+            data[9]=newtime10 +'\n'
+            filestream13=open('sharktaletime.txt','w')
+            filestream13.writelines(data)
+            filestream13.close()
+        if newtime11!='':
+            data[10]=newtime11 +'\n'
+            filestream14=open('sharktaletime.txt','w')
+            filestream14.writelines(data)
+            filestream14.close() 
+        if newtime12!='':
+            data[11]=newtime12 +'\n'
+            filestream15=open('sharktaletime.txt','w')
+            filestream15.writelines(data)
+            filestream15.close() 
+        if newtime13!='':
+            data[12]=newtime13 +'\n'
+            filestream16=open('sharktaletime.txt','w')
+            filestream16.writelines(data)
+            filestream16.close()
+        if newtime14!='':
+            data[13]=newtime14 +'\n'
+            filestream17=open('sharktaletime.txt','w')
+            filestream17.writelines(data)
+            filestream17.close()
+        if newtime15!='':
+            data[14]=newtime15 +'\n'
+            filestream18=open('sharktaletime.txt','w')
+            filestream18.writelines(data)
+            filestream18.close() 
+        if newtime16!='':
+            data[15]=newtime16 +'\n'
+            filestream19=open('sharktaletime.txt','w')
+            filestream19.writelines(data)
+            filestream19.close() 
+        if newtime17!='':
+            data[16]=newtime17 +'\n'
+            filestream20=open('sharktaletime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close() 
+        if newtime18!='':
+            data[17]=newtime18 +'\n'
+            filestream20=open('sharktaletime.txt','w')
+            filestream20.writelines(data)
+            filestream20.close()
+        if newtime19!='':
+            data[18]=newtime19 +'\n'
+            filestream21=open('sharktaletime.txt','w')
+            filestream21.writelines(data)
+            filestream21.close()
+        if newtime20!='':
+            data[19]=newtime20 +'\n'
+            filestream22=open('sharktaletime.txt','w')
+            filestream22.writelines(data)
+            filestream22.close() 
+        if newtime21!='':
+            data[20]=newtime21 +'\n'
+            filestream23=open('sharktaletime.txt','w')
+            filestream23.writelines(data)
+            filestream23.close() 
 
     change_to_Admin()
 
@@ -2333,13 +3274,13 @@ def manage_shows():
 #-------------------------edit Shows Frame---------------------------------------------
 def edit_show():
     global ent15,ent16,ent17,ent18,ent19,ent20,ent21,ent22,ent23,ent24,ent25,ent26,ent27,ent28,ent29,ent30,ent31,ent32,ent33,ent34,ent35,ent36
-    global moviecost2
+    global moviecost
     #making and placing back button
     btn_change_to_Manage_shows = tkinter.Button(edit_shows_frame,font = font_small,text ="Back",command = change_to_ManageShows)
     btn_change_to_Manage_shows.place(x=10,y=10)
     #labels for edit
     lbl_heading_edit = tkinter.Label(edit_shows_frame,text=moviename,font=font_large)
-    lbl_cost_edit = tkinter.Label(edit_shows_frame,text= moviecost2,font=font_small)
+    lbl_cost_edit = tkinter.Label(edit_shows_frame,text= moviecost,font=font_small)
     lbl_cost2_edit = tkinter.Label(edit_shows_frame,text='To change the cost type in the box the new amount',font=font_small)
     lbl_time_edit = tkinter.Label(edit_shows_frame,text='Showtimes:')
     lbl_time_edit2 = tkinter.Label(edit_shows_frame,text='Type in the new time for any showtime or type N/A to remove the time')
@@ -2466,7 +3407,6 @@ def edit_show():
     #making an apply button
     btn_apply_changes = tkinter.Button(edit_shows_frame,font=font_small,text='Apply',height=2,width=40,command=apply_edit)
     btn_apply_changes.place(x=40,y=530)
-
 
 
 
