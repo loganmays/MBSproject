@@ -5,6 +5,7 @@ import tkinter.font as font
 from PIL import Image, ImageTk
 from itertools import cycle
 from tkinter import ttk
+import random
 
 
 heading_description = ''
@@ -71,7 +72,8 @@ def CheckoutConfirmed():
             if moviefilename =='sharktale.jpg':
                 file.write('Shark Tale\n' + (smmer)+'\n')
         file.close()
-        tkinter.messagebox.showinfo('Checkout','Checkout Successful')
+        ran_num="Your confirmation number is: "+str(random.randint(1000,9999))
+        tkinter.messagebox.showinfo('Checkout',ran_num)
         change_to_Main()
 
 def paypalconfirm():
@@ -759,8 +761,6 @@ def apply_edit():
         filestream2.close()
     filestream3 =open(moviefilename2,'r')
     data =filestream3.readlines()
-    new_line=''
-    new_content=''
     if newtime1!='':
         data[0]=newtime1+'\n'
     if newtime2!='':
