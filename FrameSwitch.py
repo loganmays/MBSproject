@@ -17,52 +17,6 @@ global image22
 global img22
 global image23
 global img23
-global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
-global diehardsun1,diehardsun2,diehardsun3
-global rushhoursun1,rushhoursun2,rushhoursun3
-global elfsun1,elfsun2,elfsun3
-global matrixsun1,matrixsun2,matrixsun3
-global onepiecesun1,onepiecesun2,onepiecesun3
-global fightclubsun1,fightclubsun2,fightclubsun3
-global batmansun1,batmansun2,batmansun3
-global sharktalesun1,sharktalesun2,sharktalesun3
-djangosun1 ='1:00 PM'
-djangosun2 = '3:45 PM'
-djangosun3 = '7:00PM'
-diehardsun1 ='1:00 PM'
-diehardsun2 = '3:45 PM'
-diehardsun3 = '7:00PM'
-rushhoursun1 ='1:00 PM'
-rushhoursun2 = '3:45 PM'
-rushhoursun3 = '7:00PM'
-elfsun1 ='1:00 PM'
-elfsun2 = '3:45 PM'
-elfsun3 = '7:00PM'
-matrixsun1 ='1:00 PM'
-matrixsun2 = '3:45 PM'
-matrixsun3 = '7:00PM'
-onepiecesun1 ='1:00 PM'
-onepiecesun2 = '3:45 PM'
-onepiecesun3 = '7:00PM'
-fightclubsun1 ='1:00 PM'
-fightclubsun2 = '3:45 PM'
-fightclubsun3 = '7:00PM'
-batmansun1 ='1:00 PM'
-batmansun2 = '3:45 PM'
-batmansun3 = '7:00PM'
-sharktalesun1 ='1:00 PM'
-sharktalesun2 = '3:45 PM'
-sharktalesun3 = '7:00PM'
-
-diehard_price=15
-Rushhour_price=15
-elf_price=15
-matrix_price=15
-onepiece_price=15
-fightclub_price=15
-batman_price=15
-django_price=15
-sharktale_price =15
 
 
 
@@ -254,31 +208,91 @@ def SumTicketsSold():
         fInt2 =int(fInt1)
     if gInt1!='':
         gInt2 =int(gInt1)
+    
+    file3 = open('diehardcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line3 in Lines3:
+        line3 = line3.strip('\n')
+        moviecost1 =int(line3)
+
+    file4 = open('rushhourcost.txt', 'r')
+    Lines4 = file4.readlines()
+    for line4 in Lines4:
+        line4 = line4.strip('\n')
+        moviecost2 =int(line4)
+    
+    file5 = open('elfcost.txt', 'r')
+    Lines5 = file5.readlines()
+    for line5 in Lines5:
+        line5 = line5.strip('\n')
+        moviecost3 =int(line5)
+    
+    file6 = open('matrixcost.txt', 'r')
+    Lines6 = file6.readlines()
+    for line6 in Lines6:
+        line6 = line6.strip('\n')
+        moviecost4 =int(line6)
+    
+    file7 = open('onepiececost.txt', 'r')
+    Lines7 = file7.readlines()
+    for line7 in Lines7:
+        line7 = line7.strip('\n')
+        moviecost5 =int(line7)
+    
+    file8 = open('fightclubcost.txt', 'r')
+    Lines8 = file8.readlines()
+    for line8 in Lines8:
+        line8 = line8.strip('\n')
+        moviecost6 =int(line8)
+    
+    file9 = open('darkknightcost.txt', 'r')
+    Lines9 = file9.readlines()
+    for line9 in Lines9:
+        line9 = line9.strip('\n')
+        moviecost7 =int(line9)
+    
+    file10 = open('djangocost.txt', 'r')
+    Lines10 = file10.readlines()
+    for line10 in Lines10:
+        line10 = line10.strip('\n')
+        moviecost8 =int(line10)
+    
+    file11 = open('sharktalecost.txt', 'r')
+    Lines11 = file11.readlines()
+    for line11 in Lines11:
+        line11 = line11.strip('\n')
+        moviecost9 =int(line11)
+
+
+
+
+
     summy = aInt2 + bInt2 + cInt2 + dInt2 + eInt2 + fInt2 + gInt2
     if(moviefilename=='diehardpic.jpg'):
-        TotalCost=summy * diehard_price
+        TotalCost=summy * moviecost1
     if moviefilename =='djangopic.jpg':
-        TotalCost=summy * django_price
+        TotalCost=summy * moviecost8
     if moviefilename =='rushhourpic.jpg':
-        TotalCost=summy * Rushhour_price
+        TotalCost=summy * moviecost2
     if moviefilename =='elfpic.jpg':
-        TotalCost=summy * elf_price
+        TotalCost=summy * moviecost3
     if moviefilename =='matrixpic.jpg':
-        TotalCost=summy * matrix_price
+        TotalCost=summy * moviecost4
     if moviefilename =='onepiecepic.jpg':
-        TotalCost=summy * onepiece_price
+        TotalCost=summy * moviecost5
     if moviefilename =='fightclubpic.jpg':
-        TotalCost=summy * fightclub_price
+        TotalCost=summy * moviecost6
     if moviefilename =='darkknightpic.jpg':
-        TotalCost=summy * batman_price
+        TotalCost=summy * moviecost7
     if moviefilename =='sharktale.jpg':
-        TotalCost=summy * sharktale_price
+        TotalCost=summy * moviecost9
     smmer = str(summy)
     change_to_Checkout()
 
 #function to change the editing page to have die hard info
 def diehard_edit():
     global moviename
+    global moviefilename2,moviefilename3
     global moviecost
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
@@ -290,6 +304,9 @@ def diehard_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Die Hard'
+    moviefilename2 = 'diehardtime.txt'
+    moviefilename3 = 'diehardcost.txt'
+    
     file3 = open('diehardcost.txt', 'r')
     Lines3 = file3.readlines()
     for line in Lines3:
@@ -328,6 +345,7 @@ def diehard_edit():
 def rushhour_edit():
     global moviename
     global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -338,7 +356,13 @@ def rushhour_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Rush Hour'
-    moviecost ='Cost= $'+str(Rushhour_price)
+    moviefilename2 = 'rushhourtime.txt'
+    moviefilename3 = 'rushhourcost.txt'
+    file3 = open('rushhourcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('rushhourtime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -370,6 +394,7 @@ def rushhour_edit():
 def elf_edit():
     global moviename
     global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -380,7 +405,13 @@ def elf_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Elf'
-    moviecost ='Cost= $'+str(elf_price)
+    moviefilename2 = 'elftime.txt'
+    moviefilename3 = 'elfcost.txt'
+    file3 = open('elfcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('elftime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -411,8 +442,8 @@ def elf_edit():
 def matrix_edit():
     global moviename
     global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -422,7 +453,13 @@ def matrix_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Matrix'
-    moviecost ='Cost= $'+str(matrix_price)
+    moviefilename2 = 'matrixtime.txt'
+    moviefilename3 = 'matrixcost.txt'
+    file3 = open('matrixcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('matrixtime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -453,6 +490,7 @@ def matrix_edit():
 def onepiece_edit():
     global moviename
     global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -463,7 +501,13 @@ def onepiece_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='One Piece'
-    moviecost ='Cost= $'+str(onepiece_price)
+    moviefilename2 = 'onepiecetime.txt'
+    moviefilename3 = 'onepiececost.txt'
+    file3 = open('onepiececost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('onepiecetime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -494,8 +538,8 @@ def onepiece_edit():
 def fightclub_edit():
     global moviename
     global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global timemovie1,timemovie2,timemovie3
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
     Login_frame.forget()
@@ -505,7 +549,13 @@ def fightclub_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Fight Club'
-    moviecost ='Cost= $'+str(fightclub_price)
+    moviefilename2 = 'fightclubtime.txt'
+    moviefilename3 = 'fightclubcost.txt'
+    file3 = open('fightclubcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('fightclubtime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -536,7 +586,7 @@ def fightclub_edit():
 def batman_edit():
     global moviename
     global moviecost
-    global timemovie1,timemovie2,timemovie3
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -547,7 +597,13 @@ def batman_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='The Dark Knight'
-    moviecost ='Cost= $'+str(batman_price)
+    moviefilename2 = 'batmantime.txt'
+    moviefilename3 = 'darkknightcost.txt'
+    file3 = open('darkknightcost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('batmantime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -577,7 +633,8 @@ def batman_edit():
 #function to change the editing page to have Django info
 def django_edit():
     global moviename
-    global moviecost2
+    global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -588,7 +645,13 @@ def django_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Django Unchained'
-    moviecost2 ='Cost= $'+str(django_price)
+    moviefilename2 = 'djangotime.txt'
+    moviefilename3 = 'djangocost.txt'
+    file3 = open('djangocost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('djangotime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -619,6 +682,7 @@ def django_edit():
 def SharkTale_edit():
     global moviename
     global moviecost
+    global moviefilename2,moviefilename3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     for widget in edit_shows_frame.winfo_children():
         widget.destroy()
@@ -629,7 +693,13 @@ def SharkTale_edit():
     ManageShows_frame.forget()
     edit_shows_frame.pack(fill='both', expand=1)
     moviename ='Shark Tale'
-    moviecost ='Cost= $'+str(sharktale_price)
+    moviefilename2 = 'sharktaletime.txt'
+    moviefilename3 = 'sharktalecost.txt'
+    file3 = open('sharktalecost.txt', 'r')
+    Lines3 = file3.readlines()
+    for line in Lines3:
+        line = line.strip('\n')
+        moviecost ='Cost= $'+str(line)
     file2 = open('sharktaletime.txt', 'r')
     Lines2 = file2.readlines()
     movie_time1=Lines2[0].strip('\n')
@@ -658,124 +728,89 @@ def SharkTale_edit():
 
 #Function to apply the changes the admin made
 def apply_edit():
-    global ent15
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     new_price = str(ent15.get())
     newtime1 = str(ent16.get())
     newtime2 =str(ent17.get())
     newtime3 =str(ent18.get())
-    #newtime4 =str(ent19.get())
-    #newtime5 =str(ent20.get())
-    #newtime6 =str(ent21.get())
-    #newtime7 =str(ent22.get())
-    #newtime8 =str(ent23.get())
+    newtime4 =str(ent19.get())
+    newtime5 =str(ent20.get())
+    newtime6 =str(ent21.get())
+    newtime7 =str(ent22.get())
+    newtime8 =str(ent23.get())
+    newtime9 = str(ent24.get())
+    newtime10 =str(ent25.get())
+    newtime11 =str(ent26.get())
+    newtime12 =str(ent27.get())
+    newtime13 =str(ent28.get())
+    newtime14 =str(ent29.get())
+    newtime15 =str(ent30.get())
+    newtime16 =str(ent31.get())
+    newtime17 = str(ent32.get())
+    newtime18 =str(ent33.get())
+    newtime19 =str(ent34.get())
+    newtime20 =str(ent35.get())
+    newtime21 =str(ent36.get())
 
 
+    if new_price!='':
+        filestream2 = open(moviefilename3, 'w')
+        filestream2.write(new_price)
+        filestream2.close()
+    filestream3 =open(moviefilename2,'r')
+    data =filestream3.readlines()
+    new_line=''
+    new_content=''
+    if newtime1!='':
+        data[0]=newtime1+'\n'
+    if newtime2!='':
+        data[1]=newtime2+'\n'
+    if newtime3!='':
+        data[2]=newtime3+'\n'
+    if newtime4!='':
+        data[3]=newtime4+'\n'
+    if newtime5!='':
+        data[4]=newtime5+'\n'
+    if newtime6!='':
+        data[5]=newtime6+'\n'
+    if newtime7!='':
+        data[6]=newtime7+'\n'
+    if newtime8!='':
+        data[7]=newtime8+'\n'
+    if newtime9!='':
+        data[8]=newtime9+'\n'
+    if newtime10!='':
+        data[9]=newtime10+'\n'
+    if newtime11!='':
+        data[10]=newtime11+'\n'
+    if newtime12!='':
+        data[11]=newtime12+'\n'
+    if newtime13!='':
+       data[12]=newtime13+'\n'
+    if newtime14!='':
+        data[13]=newtime14+'\n'
+    if newtime15!='':
+        data[14]=newtime15+'\n'
+    if newtime16!='':
+        data[15]=newtime16+'\n'
+    if newtime17!='':
+        data[16]=newtime17+'\n'
+    if newtime18!='':
+        data[17]=newtime18+'\n'
+    if newtime19!='':
+        data[18]=newtime19+'\n'
+    if newtime20!='':
+        data[19]=newtime20+'\n'
+    if newtime21!='':
+        data[20]=newtime21+'\n'
+    
+    filestream3.close()
+    with open(moviefilename2,'w') as fp:
+        for item in data:
+            fp.write(item)
+    
+    fp.close()
 
-    if moviename =='Die Hard':
-        filestream3 =open('diehardtime.txt','r')
-        data =filestream3.readlines()
-        filestream3.close()
-        if new_price!='':
-            filestream2 = open('diehardcost.txt', 'w')
-            filestream2.write(new_price)
-            filestream2.close()
-        if newtime1!='':
-            data[0]=newtime1 +'\n'
-            filestream4=open('diehardtime.txt','w')
-            filestream4.writelines(data)
-            filestream4.close()
-        if newtime2!='':
-            data[1]=newtime2 +'\n'
-            filestream5=open('diehardtime.txt','w')
-            filestream5.writelines(data)
-            filestream5.close()
-        if newtime3!='':
-            data[2]=newtime3 +'\n'
-            filestream6=open('diehardtime.txt','w')
-            filestream6.writelines(data)
-            filestream6.close() 
-            
-
-    if moviename =='Rush Hour':
-        if new_price!='':
-            Rushhour_price = int(new_price)
-        if newtime1!='':
-            rushhoursun1=newtime1
-        if newtime2!='':
-            rushhoursun2=newtime2
-        if newtime3!='':
-            rushhoursun3=newtime3
-
-    if moviename =='Elf':
-        if new_price!='':
-            elf_price = int(new_price)
-        if newtime1!='':
-            elfsun1=newtime1
-        if newtime2!='':
-            elfsun2=newtime2
-        if newtime3!='':
-            elfsun3=newtime3
-
-    if moviename =='The Matrix':
-        if new_price!='':
-            matrix_price = int(new_price)
-        if newtime1!='':
-            matrixsun1=newtime1
-        if newtime2!='':
-            matrixsun2=newtime2
-        if newtime3!='':
-            matrixsun3=newtime3
-
-    if moviename =='One Piece':
-        if new_price!='':
-            onepiece_price = int(new_price)
-        if newtime1!='':
-            onepiecesun1=newtime1
-        if newtime2!='':
-            onepiecesun2=newtime2
-        if newtime3!='':
-            onepiecesun3=newtime3
-
-    if moviename =='Fight Club':
-        if new_price!='':
-            fightclub_price = int(new_price)
-        if newtime1!='':
-            fightclubsun1=newtime1
-        if newtime2!='':
-            fightclubsun2=newtime2
-        if newtime3!='':
-            fightclubsun3=newtime3
-
-    if moviename =='The Dark Knight':
-        if new_price!='':
-            batman_price = int(new_price)
-        if newtime1!='':
-            batmansun1=newtime1
-        if newtime2!='':
-            batmansun2=newtime2
-        if newtime3!='':
-            batmansun3=newtime3
-
-    if moviename =='Django Unchained':
-        if new_price!='':
-            django_price = int(new_price)
-        if newtime1!='':
-            djangosun1=newtime1
-        if newtime2!='':
-            djangosun2=newtime2
-        if newtime3!='':
-            djangosun3=newtime3
-
-    if moviename =='Shark Tale':
-        if new_price!='':
-            sharktale_price = int(new_price)
-        if newtime1!='':
-            sharktalesun1=newtime1
-        if newtime2!='':
-            sharktalesun2=newtime2
-        if newtime3!='':
-            sharktalesun3=newtime3
 
     change_to_Admin()
 
@@ -959,15 +994,9 @@ def change_to_Showtime():
     global image23
     global img23
     global moviefilename
-    global movie_time1,movie_time2,movie_time3
-    global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
     image23 = Image.open(moviefilename)
     image23 = image23.resize((200,250), Image.ANTIALIAS)
     img23 = ImageTk.PhotoImage(image23)
-    if moviefilename=='djangopic.jpg':
-        movie_time1 =djangosun1
-        movie_time2 = djangosun2
-        movie_time3 =djangosun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -1067,7 +1096,6 @@ def diehard_description():
     global image22
     global img22
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global diehardsun1,diehardsun2,diehardsun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -1123,7 +1151,6 @@ def diehard_description():
 def rushour_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global rushhoursun1,rushhoursun2,rushhoursun3
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
@@ -1180,7 +1207,6 @@ def rushour_description():
 def elf_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global elfsun1,elfsun2,elfsun3
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
@@ -1237,7 +1263,6 @@ def elf_description():
 def matrix_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
-    global matrixsun1,matrixsun2,matrixsun3
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
     global image22
     global img22
@@ -1298,7 +1323,6 @@ def onepiece_description():
     global image22
     global img22
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global onepiecesun1,onepiecesun2,onepiecesun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -1355,7 +1379,6 @@ def fightclub_description():
     global image22
     global img22
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global fightclubsun1,fightclubsun2,fightclubsun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -1412,7 +1435,6 @@ def batman_description():
     global image22
     global img22
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global batmansun1,batmansun2,batmansun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
@@ -1466,7 +1488,6 @@ def django_description():
     for widget in Description_Frame.winfo_children():
         widget.destroy()
     global heading_description,movieruntime,movie_description,movierating,moviecost,moviefilename
-    global djangosun1,djangosun2,djangosun3,djangomon1,djangomon2,djangomon3,djangotues1,djangotues2,djangotues3,djangowed1,djangowed2,djangowed3,djangothurs1,djangothurs2,djangothurs3,djangofri1,djangofri2,djangofri3,djangosat1,djangosat2,djangosat3
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
     global image22
     global img22
@@ -1527,7 +1548,6 @@ def sharktale_description():
     global image22
     global img22
     global movie_time1, movie_time2, movie_time3, movie_time4, movie_time5, movie_time6, movie_time7, movie_time8, movie_time9, movie_time10, movie_time11, movie_time12, movie_time13, movie_time14, movie_time15, movie_time16, movie_time17, movie_time18, movie_time19, movie_time20, movie_time21
-    global sharktalesun1,sharktalesun2,sharktalesun3
     Login_frame.forget()
     Main_frame.forget()
     Upcoming_frame.forget()
