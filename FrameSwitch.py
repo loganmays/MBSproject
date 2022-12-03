@@ -96,7 +96,8 @@ def paypalconfirm():
                 file.write('Dark Knight\n' + (smmer)+'\n')
             if moviefilename =='sharktale.jpg':
                 file.write('Shark Tale\n' + (smmer)+'\n')
-    tkinter.messagebox.showinfo('Checkout','Checkout Successful')
+    ran_num="Your confirmation number is: "+str(random.randint(1000,9999))
+    tkinter.messagebox.showinfo('Checkout',ran_num)
     file.close()
     change_to_Main()
 
